@@ -4,6 +4,12 @@ Slides of my workshops and talks.
 
 * [Bitcoin Basics](https://gcomte.github.io/bitcoin-basics/)
 
+### Video
+
+'Cause I know you guys are too lazy for reading.
+
+* [Bitcoin Security](https://www.youtube.com/playlist?list=PLw2CWTI2tWri1NkoE6GSVHdwXjJUngAE2)
+
 ### About me
 <img src="https://avatars2.githubusercontent.com/u/8024734" width="250"><br/>
 Gabriel Comte
