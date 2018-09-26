@@ -14,6 +14,7 @@ Slides of my workshops and talks.
 <img src="https://avatars2.githubusercontent.com/u/8024734" width="250"><br/>
 Gabriel Comte
 
+------
 
 [Twitter](https://twitter.com/gcomxx) | [Mastodon](https://bitcoinhackers.org/@gcom)<br />
 PGP: 448A 27DC D9A0 0F41 6C3D A9D7 0558 70CB 97BC AB2F<br />
