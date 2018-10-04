@@ -1,11 +1,15 @@
 <style>
     .page-header { display: none; }
     .site-footer { display: none; }
+    h1 {
+        text-align: center !important;
+        font-weight: bold !important;
+    }
 </style>
  
 
-hello world
-
+⚡ Timline of the Lightning Network ⚡
+===
 
 
 
