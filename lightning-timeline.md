@@ -1,6 +1,10 @@
 <style>
     body {
-        background: black;
+        background: url('https://upload.wikimedia.org/wikipedia/commons/9/93/Longhorndave_-_Lightning_2_%28by%29.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
     .page-header { display: none; }
     .site-footer { display: none; }
@@ -11,8 +15,19 @@
     h1 {
         text-align: center !important;
         font-weight: bold !important;
-        margin: 2.5rem !important;
+        margin: 2.5rem 25% !important;
         color: #FEDE36 !important;
+        background: rgba(0,0,0,0.5) !important;
+    }
+    @media only screen and (max-width: 1024px) {
+        h1 {
+            display:none;
+        }
+    }
+    @media only screen and (max-width: 1380px) {
+        h1 {
+            font-size: 25px;
+        }
     }
 </style>
  
