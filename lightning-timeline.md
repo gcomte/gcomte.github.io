@@ -28,6 +28,9 @@
             font-size: 25px;
         }
     }
+    .site-footer{
+        border-top: none !important;
+    }
 </style>
  
 
@@ -49,8 +52,12 @@
 
 
 <script>
-    (function(){ 
+    window.onload = function(){ 
+    
         // change page title
         document.title = 'Lightning Network Timeline';
-    })();
+        
+        // setup footer
+        document.querySelector('footer').innerHTML = 'New text!';
+    };
 </script>
