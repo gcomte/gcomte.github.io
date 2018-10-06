@@ -16,6 +16,8 @@
         font-weight: bold !important;
         margin: 2.5rem 25% !important;
         color: #FEDE36 !important;
+    }
+    h1, .site-footer-credits {
         background: rgba(0,0,0,0.5) !important;
     }
     @media only screen and (max-width: 1024px) {
@@ -30,6 +32,13 @@
     }
     .site-footer{
         border-top: none !important;
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+    .site-footer-credits {
+        text-align: center;
+        padding: 0 1rem;
     }
 </style>
  
