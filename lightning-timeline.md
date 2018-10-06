@@ -56,7 +56,7 @@
 
 <!-- timeline data -->
 <script type="text/javascript">
-    timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1cWqQBZCkX9GpzFtxCWHoqFXCHg-ylTVUWlnrdYMzKUI/pubhtml');
+    timeline = new TL.Timeline('timeline-embed', 'https://raw.githubusercontent.com/NUKnightLab/TimelineJS3/master/website/templates/examples/houston/timeline3.json');
 </script>
 
 
