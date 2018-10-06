@@ -1,6 +1,6 @@
 <style>
     body {
-        background: url('https://upload.wikimedia.org/wikipedia/commons/9/93/Longhorndave_-_Lightning_2_%28by%29.jpg') no-repeat center center fixed;
+        background: url('https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/DavidsLightning.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
