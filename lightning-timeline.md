@@ -7,7 +7,6 @@
         background-size: cover;
     }
     .page-header { display: none; }
-    .site-footer { display: none; }
     .main-content {
         max-width:100%;
         padding: 0 0;
