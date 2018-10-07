@@ -55,7 +55,7 @@
 
 <!-- timeline data -->
 <script type="text/javascript">
-    timeline = new TL.Timeline('timeline-embed', 'https://raw.githubusercontent.com/NUKnightLab/TimelineJS3/master/website/templates/examples/houston/timeline3.json');
+    timeline = new TL.Timeline('timeline-embed', 'https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/data.json');
 </script>
 
 
