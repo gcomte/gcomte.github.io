@@ -71,6 +71,6 @@
             'powered by <a href="https://timeline.knightlab.com/" target="_blank">Timeline JS</a> | ' +
             'background by <a href="https://www.flickr.com/photos/davidw/171031395/in/gallery-56795350@N02-72157625556082066/" target="_blank">David</a> | ' +
             'created by <a href="https://gcomte.github.io/" target="_blank">me</a> | ' +
-            '<a href="https://gcomte.github.io/lightning-timeline/contribute" target="_blank"">CONTRIBUTE!</a>';
+            '<a href="https://gcomte.github.io/contribute-to-lightning-timeline" target="_blank"">CONTRIBUTE!</a>';
     };
 </script>
