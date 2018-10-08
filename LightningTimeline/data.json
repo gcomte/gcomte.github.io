@@ -26,16 +26,18 @@
     },
     {
       "media": {
-        "url": "https://youtu.be/A4jGzNm2yPI",
-        "caption": "Whitney Houston and Clive Davis discussing her discovery and her eponymous first album.",
-        "credit": "Sony Music Entertainment"
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/mostRecentWhitePaper.png",
+        "caption": "DRAFT Version 0.5.9.2",
+        "credit": "Joseph Poon, Thaddeus Dryja"
       },
       "start_date": {
-        "year": "1983"
+        "day": "14",
+        "month": "1",
+        "year": "2016"
       },
       "text": {
-        "headline": "Signed",
-        "text": "Houston is signed to Arista Records after exec Clive Davis sees her performing on stage with her mother in New York."
+        "headline": "Most recent version of paper released",
+        "text": "<p>The paper \"The Bitcoin Lightning Network\" got released in its <a href='https://lightning.network/lightning-network-paper.pdf'>most recent form</a>, namely the DRAFT Version 0.5.9.2"
       }
     },
     {
