@@ -2,7 +2,7 @@
   "title": {
     "media": {
       "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/recksplorer_october2018_smaller.png",
-      "caption": "<a href=\"https://rompert.com/recksplorer/\">Recksplorer</a>, October 2018"
+      "caption": "<a href='https://rompert.com/recksplorer/' target='_blank'>Recksplorer</a>, October 2018"
     },
     "text": {
       "headline": "Overview",
@@ -12,60 +12,16 @@
   "events": [
     {
       "media": {
-        "url": "{{ static_url }}/img/examples/houston/family.jpg",
-        "caption": "Houston's mother and Gospel singer, Cissy Houston (left) and cousin Dionne Warwick.",
-        "credit": "Cissy Houston photo:<a href='http://www.flickr.com/photos/11447043@N00/418180903/'>Tom Marcello</a><br/><a href='http://commons.wikimedia.org/wiki/File%3ADionne_Warwick_television_special_1969.JPG'>Dionne Warwick: CBS Television via Wikimedia Commons</a>"
+        "url": "https://youtu.be/8zVzw912wPo",
+        "caption": "Joseph Poon presenting the ideas of the paper in March 2015"
       },
       "start_date": {
-        "month": "8",
-        "day": "9",
-        "year": "1963"
+        "month": "2",
+        "year": "2015"
       },
       "text": {
-        "headline": "A Musical Heritage",
-        "text": "<p>Born in New Jersey on August 9th, 1963, Houston grew up surrounded by the music business. Her mother is gospel singer Cissy Houston and her cousins are Dee Dee and Dionne Warwick.</p>"
-      }
-    },
-    {
-      "media": {
-        "url": "https://youtu.be/fSrO91XO1Ck",
-        "caption": "",
-        "credit": "<a href=\"http://unidiscmusic.com\">Unidisc Music</a>"
-      },
-      "start_date": {
-        "year": "1978"
-      },
-      "text": {
-        "headline": "First Recording",
-        "text": "At the age of 15 Houston was featured on Michael Zager's song, Life's a Party."
-      }
-    },
-    {
-      "media": {
-        "url": "https://youtu.be/_gvJCCZzmro",
-        "caption": "A young poised Whitney Houston in an interview with EbonyJet.",
-        "credit": "EbonyJet"
-      },
-      "start_date": {
-        "year": "1978"
-      },
-      "text": {
-        "headline": "The Early Years",
-        "text": "As a teen Houston's credits include background vocals for Jermaine Jackson, Lou Rawls and the Neville Brothers. She also sang on Chaka Khan's, 'I'm Every Woman,' a song which she later remade for the <i>Bodyguard</i> soundtrack which is the biggest selling soundtrack of all time. It sold over 42 million copies worldwide."
-      }
-    },
-    {
-      "media": {
-        "url": "https://youtu.be/H7_sqdkaAfo",
-        "caption": "I'm Every Women as performed by Whitney Houston.",
-        "credit": "Arista Records"
-      },
-      "start_date": {
-        "year": "1978"
-      },
-      "text": {
-        "headline": "Early Album Credits",
-        "text": "As a teen Houston's credits include background vocals for Jermaine Jackson, Lou Rawls and the Neville Brothers. She also sang on Chaka Khan's, 'I'm Every Woman,' a song which she later remade for the <i>Bodyguard</i> soundtrack which is the biggest selling soundtrack of all time. It sold over 42 million copies worldwide."
+        "headline": "\"The Bitcoin Lightning Network\" paper released",
+        "text": "<p>Joseph Poon and Thaddeus Dryja release the paper which later on would often be referred to as the Lightning Network white paper.</p><p>While the paper was <a href='https://web.archive.org/web/20150228162703/http://lightning.network/' target='_blank'>published as work in progress</a>, the proposed use of Hashed Timelock Contracts for routing payments over multiple channels turned out to be a game-changer.</p>"
       }
     },
     {
