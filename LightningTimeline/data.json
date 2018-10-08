@@ -11,6 +11,18 @@
   },
   "events": [
     {
+      "start_date": {
+        "year": "2009"
+      },
+      "end_date": {
+        "year": "2015"
+      },
+      "text": {
+        "headline": "Discussions about payment channels",
+        "text": "<p>The ideas about payment channels (a fundamental element of the Lightning Network) are almost as old as Bitcoin itself.</p><p>You can read more about the ideas and the people involved in the discussions in <a href=\"https://bitcoinmagazine.com/articles/history-lightning-brainstorm-beta/\" target=\"_blank\">this article</a>.</p>"
+      }
+    },
+    {
       "media": {
         "url": "https://youtu.be/8zVzw912wPo",
         "caption": "Joseph Poon presenting the ideas of the paper in March 2015"
@@ -52,21 +64,7 @@
       },
       "text": {
         "headline": "DDoS Attack",
-        "text": "A Distributed Denial of Service (DDoS) attack <a href=\"https://www.trustnodes.com/2018/03/21/lightning-network-ddos-sends-20-nodes\">took down around 200 Lightning Network nodes</a>. At the time this was about 20% of the network, reducing its online nodes count from around 1,050 to 870.</p><p>About one month before, cryptographer Peter Todd was warning that the Lightning Network is vulnerable to such an attack in the current state [of that point in time].</p>"
-      }
-    },
-    {
-      "media": {
-        "url": "https://youtu.be/v0XuiMX1XHg",
-        "caption": "Dionne Warwick gleefully announces cousin, Whitney Houston, the winner of the Best Female Pop Vocal Performance for the song Saving All My Love.",
-        "credit": "<a href='http://grammy.org'>The Recording Academy</a>"
-      },
-      "start_date": {
-        "year": "1986"
-      },
-      "text": {
-        "headline": "'The Grammys'",
-        "text": "In 1986 Houston won her first Grammy for the song Saving All My Love. In total she has won six Grammys, the last of which she won in 1999 for It's Not Right But It's Okay."
+        "text": "<p>A Distributed Denial of Service (DDoS) attack <a href=\"https://www.trustnodes.com/2018/03/21/lightning-network-ddos-sends-20-nodes\">took down around 200 Lightning Network nodes</a>. At the time this was about 20% of the network, reducing its online nodes count from around 1,050 to 870.</p><p>About one month before, cryptographer Peter Todd was warning that the Lightning Network is vulnerable to such an attack in the current state [of that point in time].</p>"
       }
     },
     {
