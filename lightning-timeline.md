@@ -39,6 +39,9 @@
         padding: 0 1rem;
         background: rgba(0,0,0,0.8) !important;
     }
+    .tl-timemarker-media-container {
+        display: none !important;
+    }
 </style>
  
 
