@@ -42,16 +42,17 @@
     },
     {
       "media": {
-        "url": "https://youtu.be/m3-hY-hlhBg",
-        "caption": "The 'How Will I Know' video showcases the youthful energy that boosted Houston to stardom.",
-        "credit": "Arista Records Inc."
+        "url": "https://twitter.com/peterktodd/status/968190536812236802",
+        "caption": "Peter Todd concerned about DoS vulnerability of Lightning Network, one month prior to the attack"
       },
       "start_date": {
-        "year": "1985"
+        "day": "20",
+        "month": "3",
+        "year": "2018"
       },
       "text": {
-        "headline": "Debut",
-        "text": "Whitney Houston's self titled first release sold over 12 million copies in the U.S. and included the hit singles 'How Will I Know,' 'You Give Good Love,' 'Saving All My Love For You' and 'Greatest Love of All.'"
+        "headline": "DDoS Attack",
+        "text": "A Distributed Denial of Service (DDoS) attack <a href=\"https://www.trustnodes.com/2018/03/21/lightning-network-ddos-sends-20-nodes\">took down around 200 Lightning Network nodes</a>. At the time this was about 20% of the network, reducing its online nodes count from around 1,050 to 870.</p><p>About one month before, cryptographer Peter Todd was warning that the Lightning Network is vulnerable to such an attack in the current state [of that point in time].</p>"
       }
     },
     {
