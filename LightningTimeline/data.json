@@ -1,13 +1,12 @@
 {
   "title": {
     "media": {
-      "url": "//www.flickr.com/photos/tm_10001/2310475988/",
-      "caption": "Whitney Houston performing on her My Love is Your Love Tour in Hamburg.",
-      "credit": "flickr/<a href='http://www.flickr.com/photos/tm_10001/'>tm_10001</a>"
+      "url": "https://rompert.com/recksplorer/",
+      "caption": "Recksplorer, October 2018",
     },
     "text": {
       "headline": "Overview",
-      "text": "<p>The Lightning Network is a scaling solution for Bitcoin, based on payment channels. While the latter were already conceived by Satoshi Nakamoto, the Lightning Network and it's key components arose from the Bitcoin community with many people sharing their thoughts and ideas.</p><p>This timeline aims to summarize the corner points of the development of the Lightning Network from the release of its White Paper up to the present state of the network.</p>"
+      "text": "<p>The Lightning Network is a scaling solution for Bitcoin, based on payment channels. While the latter were already conceived by Satoshi Nakamoto, the Lightning Network and it's key components arose from the Bitcoin community itself, with many people sharing their thoughts and ideas along the way.</p><p>This timeline aims to summarize the corner points of the development of the Lightning Network from the release of its White Paper up to the present state of the network.</p>"
     }
   },
   "events": [
