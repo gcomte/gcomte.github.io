@@ -45,7 +45,7 @@
 </style>
  
 
-⚡ Timline of the Lightning Network ⚡
+⚡ Timeline of the Lightning Network ⚡
 ===
 
 <!-- timeline container -->
