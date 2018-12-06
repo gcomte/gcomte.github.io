@@ -25,7 +25,7 @@
     {
       "media": {
         "url": "https://youtu.be/8zVzw912wPo",
-        "caption": "Joseph Poon presenting the ideas of the paper in March 2015"
+        "caption": "Joseph Poon presents the ideas of the paper in March 2015"
       },
       "start_date": {
         "month": "2",
@@ -61,6 +61,22 @@
       "text": {
         "headline": "Most recent version of paper released",
         "text": "<p>The paper \"The Bitcoin Lightning Network\" was released in its <a href='https://lightning.network/lightning-network-paper.pdf'>most recent form</a>, namely the DRAFT Version 0.5.9.2"
+      }
+    },
+    {
+      "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/SegWitLogo.png",
+        "caption": "SegWit logo",
+        "caption": "Albert Dros"
+      },
+      "start_date": {
+        "day": "23",
+        "month": "8",
+        "year": "2017"
+      },
+      "text": {
+        "headline": "SegWit activates",
+        "text": "<p><a href=\"https://en.wikipedia.org/wiki/SegWit\">Segregated Witness</a> activated on the Bitcoin blockchain at block 481,824 as a soft fork.</p><p>This consensus relevant update was an important acquirement for the Lightning Network, since it solved an issue known as <a href=\"https://en.bitcoin.it/wiki/Transaction_malleability\">transaction malleability</a>, which was a fundamental precondition for implementing the Lightning Network.</p><p>This consensus change <a href=\"https://bitcoinmagazine.com/articles/long-road-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality/\">had be in the working for a long time and was subject to a lot of controversy</a>, which ended in it being forced upon its enemies in a <a href=\"https://en.wikipedia.org/wiki/User_activated_soft_fork\">user activated soft fork</a>.</p>"
       }
     },
     {
