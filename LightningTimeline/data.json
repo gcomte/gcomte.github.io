@@ -67,7 +67,7 @@
       "media": {
         "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/SegWitLogo.png",
         "caption": "SegWit logo",
-        "caption": "Albert Dros"
+        "credit": "Albert Dros"
       },
       "start_date": {
         "day": "23",
