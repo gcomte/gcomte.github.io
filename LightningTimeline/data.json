@@ -19,7 +19,7 @@
       },
       "text": {
         "headline": "Discussions about payment channels",
-        "text": "<p>The ideas about payment channels (a fundamental element of the Lightning Network) are almost as old as Bitcoin itself.</p><p>You can read more about the ideas and the people involved in the discussions in <a href=\"https://bitcoinmagazine.com/articles/history-lightning-brainstorm-beta/\" target=\"_blank\">this article</a>.</p>"
+        "text": "<p>The ideas about payment channels (a fundamental element of the Lightning Network) are almost as old as Bitcoin itself.</p><p>You can read more about the ideas and the people involved in the discussions in <a href='https://bitcoinmagazine.com/articles/history-lightning-brainstorm-beta/' target='_blank'>this article</a>.</p>"
       }
     },
     {
@@ -44,7 +44,7 @@
       },
       "text": {
         "headline": "First commit on Blockstreams \"c-lightning\"",
-        "text": "<p>After having written a <a href=\"https://rusty.ozlabs.org/?p=467\" target=\"_blank\">series of blog posts</a> to educate about the ideas behind the Lightning Network, long-time Linux kernel developer Rusty Russell joined Blockstream to start the first implementation of the Lightning Network. It is written in the C programming language and hence called <a href=\"https://github.com/ElementsProject/lightning\" target=\"blank\">c-lightning</a>.</p><p>This event was pivotal not only because the Lightning Network started to move from a concept to reality, but also because this was done by a world-class developer.</p><p>Later on he would be joined by Christian Decker, a long-time Bitcoin developer.</p>"
+        "text": "<p>After having written a <a href='https://rusty.ozlabs.org/?p=467' target='_blank'>series of blog posts</a> to educate about the ideas behind the Lightning Network, long-time Linux kernel developer Rusty Russell joined Blockstream to start the first implementation of the Lightning Network. It is written in the C programming language and hence called <a href='https://github.com/ElementsProject/lightning' target='blank'>c-lightning</a>.</p><p>This event was pivotal not only because the Lightning Network started to move from a concept to reality, but also because this was done by a world-class developer.</p><p>Later on he would be joined by Christian Decker, a long-time Bitcoin developer.</p>"
       }
     },
     {
@@ -60,7 +60,7 @@
       },
       "text": {
         "headline": "Most recent version of paper released",
-        "text": "<p>The paper \"The Bitcoin Lightning Network\" was released in its <a href='https://lightning.network/lightning-network-paper.pdf'>most recent form</a>, namely the DRAFT Version 0.5.9.2"
+        "text": "<p>The paper \"The Bitcoin Lightning Network\" was released in its <a href='https://lightning.network/lightning-network-paper.pdf' target='_blank'>most recent form</a>, namely the DRAFT Version 0.5.9.2"
       }
     },
     {
@@ -76,7 +76,7 @@
       },
       "text": {
         "headline": "SegWit activates",
-        "text": "<p><a href=\"https://en.wikipedia.org/wiki/SegWit\" target=\"_blank\">Segregated Witness</a> activated on the Bitcoin blockchain at block 481,824 as a soft fork.</p><p>This consensus relevant update was an important acquirement for the Lightning Network, since it solved an issue known as <a href=\"https://en.bitcoin.it/wiki/Transaction_malleability\" target=\"_blank\">transaction malleability</a>, which was a fundamental precondition for implementing the Lightning Network.</p><p>This consensus change <a href=\"https://bitcoinmagazine.com/articles/long-road-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality/\" target=\"_blank\">had be in the working for a long time and was subject to a lot of controversy</a>, which ended in it being forced upon its enemies in a <a href=\"https://en.wikipedia.org/wiki/User_activated_soft_fork\" target=\"_blank\">user activated soft fork</a>.</p>"
+        "text": "<p><a href='https://en.wikipedia.org/wiki/SegWit' target='_blank'>Segregated Witness</a> activated on the Bitcoin blockchain at block 481,824 as a soft fork.</p><p>This consensus relevant update was an important acquirement for the Lightning Network, since it solved an issue known as <a href='https://en.bitcoin.it/wiki/Transaction_malleability' target='_blank'>transaction malleability</a>, which was a fundamental precondition for implementing the Lightning Network.</p><p>This consensus change <a href='https://bitcoinmagazine.com/articles/long-road-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality/' target='_blank'>had be in the working for a long time and was subject to a lot of controversy</a>, which ended in it being forced upon its enemies in a <a href='https://en.wikipedia.org/wiki/User_activated_soft_fork' target='_blank'>user activated soft fork</a>.</p>"
       }
     },
     {
@@ -91,7 +91,7 @@
       },
       "text": {
         "headline": "Laszlo buys Pizzas - again!",
-        "text": "<p>Laszlo Hanyecz, the guy who famously <a href=\"https://bitcointalk.org/index.php?topic=137.0\" target=\"_blank\">bought 2 Pizzas for 10'000 BTC in 2010</a> striked again!</p><p>Reckless as he is, he once again bought two Pizzas for Bitcoin – <a href=\"https://lists.linuxfoundation.org/pipermail/lightning-dev/2018-February/001044.html\" target=\"_blank\">this time over the Lightning Network</a>, paying 649'000 satoshis.</p><p>Laszlo documented the event pretty well and you may read <a href=\"https://cointelegraph.com/news/original-pizza-day-purchaser-does-it-again-with-bitcoin-lightning-network\" target=\"_blank\">a summary</a> about it or look at <a href=\"http://eclipse.heliacal.net/~solar/bitcoin/lightning-pizza/\" target=\"_blank\">his pictures</a>. Notice the t-shirts of his sons when doing so ;-)</p>"
+        "text": "<p>Laszlo Hanyecz, the guy who famously <a href='https://bitcointalk.org/index.php?topic=137.0' target='_blank'>bought 2 Pizzas for 10'000 BTC in 2010</a> striked again!</p><p>Reckless as he is, he once again bought two Pizzas for Bitcoin – <a href='https://lists.linuxfoundation.org/pipermail/lightning-dev/2018-February/001044.html' target='_blank'>this time over the Lightning Network</a>, paying 649'000 satoshis.</p><p>Laszlo documented the event pretty well and you may read <a href='https://cointelegraph.com/news/original-pizza-day-purchaser-does-it-again-with-bitcoin-lightning-network' target='_blank'>a summary</a> about it or look at <a href='http://eclipse.heliacal.net/~solar/bitcoin/lightning-pizza/' target='_blank'>his pictures</a>. Notice the t-shirts of his sons when doing so ;-)</p>"
       }
     },
     {
@@ -106,7 +106,7 @@
       },
       "text": {
         "headline": "DDoS Attack",
-        "text": "<p>A Distributed Denial of Service (DDoS) attack <a href=\"https://www.trustnodes.com/2018/03/21/lightning-network-ddos-sends-20-nodes\">took down around 200 Lightning Network nodes</a>. At the time this was about 20% of the network, reducing its online nodes count from around 1,050 to 870.</p><p>About one month before, cryptographer Peter Todd was warning that the Lightning Network is vulnerable to such an attack in the current state [of that point in time].</p>"
+        "text": "<p>A Distributed Denial of Service (DDoS) attack <a href='https://www.trustnodes.com/2018/03/21/lightning-network-ddos-sends-20-nodes' target='_blank'>took down around 200 Lightning Network nodes</a>. At the time this was about 20% of the network, reducing its online nodes count from around 1,050 to 870.</p><p>About one month before, cryptographer Peter Todd was warning that the Lightning Network is vulnerable to such an attack in the current state [of that point in time].</p>"
       }
     },
     {
@@ -121,7 +121,7 @@
       },
       "text": {
         "headline": "satoshis.place goes online",
-        "text": "<p>One of the most popular websites of the early days of the Lightning Network went online: <a href=\"https://satoshis.place/\">Satoshi's Place</a>.<p>Inspired by the <a href=\"http://www.milliondollarhomepage.com/\">Million Dollar Homepage</a>, it lets you color pixels at a price of 1 Satoshi/pixel. The given pixels are then shown in the chosen color on satoshis.place until they get overwritten by somebody else purchasing them.</p><p>This playful website developed by <a href=\"https://twitter.com/lightningk0ala\">Lightning K0ala</a> rapidly grew in popularity and showed to the world that the Lightning Network was not only working, but also being used by people all over the world.</p>"
+        "text": "<p>One of the most popular websites of the early days of the Lightning Network went online: <a href='https://satoshis.place/'>Satoshi's Place</a>.<p>Inspired by the <a href='http://www.milliondollarhomepage.com/' target='_blank'>Million Dollar Homepage</a>, it lets you color pixels at a price of 1 Satoshi/pixel. The given pixels are then shown in the chosen color on satoshis.place until they get overwritten by somebody else purchasing them.</p><p>This playful website developed by <a href='https://twitter.com/lightningk0ala' target='_blank'>Lightning K0ala</a> rapidly grew in popularity and showed to the world that the Lightning Network was not only working, but also being used by people all over the world.</p>"
       }
     }
   ]
