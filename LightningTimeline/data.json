@@ -76,7 +76,22 @@
       },
       "text": {
         "headline": "SegWit activates",
-        "text": "<p><a href=\"https://en.wikipedia.org/wiki/SegWit\">Segregated Witness</a> activated on the Bitcoin blockchain at block 481,824 as a soft fork.</p><p>This consensus relevant update was an important acquirement for the Lightning Network, since it solved an issue known as <a href=\"https://en.bitcoin.it/wiki/Transaction_malleability\">transaction malleability</a>, which was a fundamental precondition for implementing the Lightning Network.</p><p>This consensus change <a href=\"https://bitcoinmagazine.com/articles/long-road-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality/\">had be in the working for a long time and was subject to a lot of controversy</a>, which ended in it being forced upon its enemies in a <a href=\"https://en.wikipedia.org/wiki/User_activated_soft_fork\">user activated soft fork</a>.</p>"
+        "text": "<p><a href=\"https://en.wikipedia.org/wiki/SegWit\" target=\"_blank\">Segregated Witness</a> activated on the Bitcoin blockchain at block 481,824 as a soft fork.</p><p>This consensus relevant update was an important acquirement for the Lightning Network, since it solved an issue known as <a href=\"https://en.bitcoin.it/wiki/Transaction_malleability\" target=\"_blank\">transaction malleability</a>, which was a fundamental precondition for implementing the Lightning Network.</p><p>This consensus change <a href=\"https://bitcoinmagazine.com/articles/long-road-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality/\" target=\"_blank\">had be in the working for a long time and was subject to a lot of controversy</a>, which ended in it being forced upon its enemies in a <a href=\"https://en.wikipedia.org/wiki/User_activated_soft_fork\" target=\"_blank\">user activated soft fork</a>.</p>"
+      }
+    },
+    {
+      "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/Laszlo.jpg",
+        "caption": "Laszlo with his family and the ordered Pizzas"
+      },
+      "start_date": {
+        "day": "25",
+        "month": "2",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "Laszlo buys Pizzas - again!",
+        "text": "<p>Laszlo Hanyecz, the guy who famously <a href=\"https://bitcointalk.org/index.php?topic=137.0\" target=\"_blank\">bought 2 Pizzas for 10'000 BTC in 2010</a> striked again!</p><p>Reckless as he is, he once again bought two Pizzas for Bitcoin – <a href=\"https://lists.linuxfoundation.org/pipermail/lightning-dev/2018-February/001044.html\" target=\"_blank\">this time over the Lightning Network</a>, paying 649'000 satoshis.</p><p>Laszlo documented the event pretty well and you may read <a href=\"https://cointelegraph.com/news/original-pizza-day-purchaser-does-it-again-with-bitcoin-lightning-network\" target=\"_blank\">a summary</a> about it or look at <a href=\"http://eclipse.heliacal.net/~solar/bitcoin/lightning-pizza/\" target=\"_blank\">his pictures</a>. Notice the t-shirts of his sons when doing so ;-)</p>"
       }
     },
     {
