@@ -59,6 +59,17 @@
       }
     },
     {
+      "start_date": {
+        "day": "27",
+        "month": "10",
+        "year": "2015"
+      },
+      "text": {
+        "headline": "First commit on Lightning Labs' \"LND\"",
+        "text": "<p>Olaoluwa \"Roasbeef\" Osuntokun, CTO and Co-founder of <a href='https://lightning.engineering/' target='_blank'>Lightning Labs</a> pushed the <a href='https://github.com/lightningnetwork/lnd/commit/0b66ed24be68bb6ddb29565b7a2b5f886df40001' target='_blank'>first commit</a> of a new Lightning implementation called \"LND\" onto Github.</p><p>LND is an abbreviation for \"Lightning Network Daemon\" and is written in Go.</p><p>Lightning Labs was the third company working on an own implementation of the Lightning Network protocol. Together with Blockstream and ACINQ, these were the companies that were to become the main protagonists in bootstrapping the Lightning Network protocol in the following years.</p>"
+      }
+    },
+    {
       "media": {
         "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/mostRecentWhitePaper.png",
         "caption": "DRAFT Version 0.5.9.2",
