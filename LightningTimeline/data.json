@@ -43,8 +43,19 @@
         "year": "2015"
       },
       "text": {
-        "headline": "First commit on Blockstreams \"c-lightning\"",
-        "text": "<p>After having written a <a href='https://rusty.ozlabs.org/?p=467' target='_blank'>series of blog posts</a> to educate about the ideas behind the Lightning Network, long-time Linux kernel developer Rusty Russell joined Blockstream to start the first implementation of the Lightning Network. It is written in the C programming language and hence called <a href='https://github.com/ElementsProject/lightning' target='blank'>c-lightning</a>.</p><p>This event was pivotal not only because the Lightning Network started to move from a concept to reality, but also because this was done by a world-class developer.</p><p>Later on he would be joined by Christian Decker, a long-time Bitcoin developer.</p>"
+        "headline": "First commit on Blockstream's \"c-lightning\"",
+        "text": "<p>After having written a <a href='https://rusty.ozlabs.org/?p=467' target='_blank'>series of blog posts</a> to educate about the ideas behind the Lightning Network, long-time Linux kernel developer Rusty Russell joined Blockstream to start the first implementation of the Lightning Network. It is written in the C programming language and hence called <a href='https://github.com/ElementsProject/lightning' target='_blank'>c-lightning</a>.</p><p>This event was pivotal not only because the Lightning Network started to move from a concept to reality, but also because this was done by a world-class developer.</p><p>Later on he would be joined by Christian Decker, a long-time Bitcoin developer.</p>"
+      }
+    },
+    {
+      "start_date": {
+        "day": "19",
+        "month": "8",
+        "year": "2015"
+      },
+      "text": {
+        "headline": "First commit on ACINQ's \"Eclair\"",
+        "text": "<p>Fabrice Drouin, a developer from the French startup <a href='https://acinq.co/' target='_blank'>ACINQ</a> pushed the <a href='https://github.com/ACINQ/eclair/commit/32eeba22be123212edf29f339aa02e75f52637d5' target='_blank'>first commit</a> of a new Lightning implementation called \"Eclair\" onto Github. Eclair is written in Scala.</p><p>ACINQ was consequently the second company working on an implementation of the Lightning Network protocol, and the first one to work exclusively on Lightning.</p><p>ACINQ had a big impact on building the Lightning Network community by providing working and user-friendly software early on. This includes solutions like <a href='https://play.google.com/store/apps/details?id=fr.acinq.eclair.wallet.mainnet2&hl=en' target='_blank'>their Android wallet</a> and their virtual coffee shop called <a href='https://starblocks.acinq.co/' target='_blank'>Starblocks</a>.</p>"
       }
     },
     {
