@@ -87,6 +87,21 @@
     },
     {
       "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/first-lightning-payment-for-cats.png",
+        "caption": "The image that Christiand Decker bought from Rusty Russell"
+      },
+      "start_date": {
+        "day": "05",
+        "month": "10",
+        "year": "2016"
+      },
+      "text": {
+        "headline": "First purchase on the Bitcoin testnet",
+        "text": "<p>Christian Decker, <a href='https://github.com/ElementsProject/lightning' target='_blank'>c-lightning</a> developer at Blockstream, made the <a href='https://blockstream.com/2016/10/05/blockstream-lightning-first-strike/' target='_blank'>first Lightning payment</a> (on the Bitcoin testnet). He bought a cat picture from fellow developer Rusty Russell for 100 satoshis.</p><p>The payment was first performed directly between two nodes, and after that even with another node in between forwarding the payment.<p>According to Blockstream, this was \"the first end-to-end test of a lightning micropayment network, including invoicing, multi-hop payment, and item delivery.\""
+      }
+    },
+    {
+      "media": {
         "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/SegWitLogo.png",
         "caption": "SegWit logo",
         "credit": "Albert Dros"
