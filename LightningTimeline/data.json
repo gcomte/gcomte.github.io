@@ -133,6 +133,21 @@
     },
     {
       "media": {
+        "url": "https://twitter.com/starkness/status/974305137991667712",
+        "caption": "Elisabeth Stark's tweet about the launch of the network"
+      },
+      "start_date": {
+        "day": "15",
+        "month": "3",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "Lightning goes live on Bitcoin mainnet!",
+        "text": "<p><a href='https://lightning.engineering/' target='_blank'>Lightning Labs</a> were the first to officially support the Bitcoin mainnet with <a href='https://blog.lightning.engineering/announcement/2018/03/15/lnd-beta.html' target='_blank'>the release of LND 0.4-beta</a>. However, even if all previous versions of all Lightning implementations were considered as not yet ready for mainnet, at the time of the release there were already around 1'000 Lightning nodes operating on mainnet.</p>"
+      }
+    },
+    {
+      "media": {
         "url": "https://twitter.com/peterktodd/status/968190536812236802",
         "caption": "Peter Todd concerned about DoS vulnerability of Lightning Network, one month prior to the attack"
       },
