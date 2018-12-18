@@ -162,6 +162,17 @@
       }
     },
     {
+      "start_date": {
+        "day": "4",
+        "month": "4",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "Lightning Network liquidity tops 10 BTC",
+        "text": "<p>The Lightning Network liquidity of the visible network [ = announced channels only ] moved over 10 BTC for the first time, distributed in over 4'800 channels belonging to more than 1'100 nodes.</p>"
+      }
+    },
+    {
       "media": {
         "url": "https://youtu.be/X9BMILCC1hY",
         "caption": "Satoshi's place: Timelapse of the first few weeks (NSFW)"
@@ -174,6 +185,17 @@
       "text": {
         "headline": "satoshis.place goes online",
         "text": "<p>One of the most popular websites of the early days of the Lightning Network went online: <a href='https://satoshis.place/'>Satoshi's Place</a>.<p>Inspired by the <a href='http://www.milliondollarhomepage.com/' target='_blank'>Million Dollar Homepage</a>, it lets you color pixels at a price of 1 Satoshi/pixel. The given pixels are then shown in the chosen color on satoshis.place until they get overwritten by somebody else purchasing them.</p><p>This playful website developed by <a href='https://twitter.com/lightningk0ala' target='_blank'>Lightning K0ala</a> rapidly grew in popularity and showed to the world that the Lightning Network was not only working, but also being used by people all over the world.</p>"
+      }
+    },
+    {
+      "start_date": {
+        "day": "6",
+        "month": "9",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "Lightning Network liquidity tops 100 BTC",
+        "text": "<p>The Lightning Network liquidity of the visible network [ = announced channels only ] moved over 100 BTC for the first time, distributed in over 8'400 channels belonging to more than 2'400 nodes.</p>"
       }
     },
     {
