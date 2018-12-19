@@ -88,7 +88,7 @@
     {
       "media": {
         "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/first-lightning-payment-for-cats.png",
-        "caption": "The image that Christiand Decker bought from Rusty Russell"
+        "caption": "The image that Christian Decker bought from Rusty Russell"
       },
       "start_date": {
         "day": "05",
@@ -170,6 +170,22 @@
       "text": {
         "headline": "Lightning Network liquidity tops 10 BTC",
         "text": "<p>The Lightning Network liquidity of the visible network [ = announced channels only ] moved over 10 BTC for the first time, distributed in over 4'800 channels belonging to more than 1'100 nodes.</p>"
+      }
+    },
+    {
+      "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/eltoo_lightning-layers.png",
+        "caption": "The Lightning Stack. Eltoo is a proposal that only concerns the updating mechanism.",
+        "credits": "Blockstream"
+      },
+      "start_date": {
+        "day": "30",
+        "month": "4",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "Eltoo paper gets published",
+        "text": "<p>Christian Decker <a href='https://blockstream.com/2018/04/30/eltoo-next-lightning/' target='_blank'>announced</a> and released a paper about a new update mechanism for Lightning called <a href='https://blockstream.com/eltoo.pdf' target='_blank'>eltoo</a>. *<p>Even though eltoo is popular amongst the Lightning community, it has not yet been implemented because it requires a new SIGHASH called <a href='https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki' target='_blank'>SIGHASH_NOINPUT</a> on Bitcoin, which can only be implemented through a Soft Fork. For this reason, Decker <a href='https://github.com/bitcoin/bips/commit/98b7238f68d17f0e01275dd32075078702225356' target='_blank'>has uploaded a first draft</a> of a proposal to integrate SIGHASH_NOINPUT (<a href='https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki' target='_blank'>BIP 118</a>) on the very same day.</p><p>While eltoo is poised to make many problems in Lightning a lot easier (e.g. channel state backups or watchtowers), critics are concerned about the lack of strong disincentives for malicious actors to propose old channel states.</p><p class=\"small-print\">* The name eltoo is derived from the English pronunciation of the letters \"L2\", which itself is an abbreviation for \"Layer 2\".<br />&nbsp;&nbsp;The Lightning Network is often referred to as a second layer solution for Bitcoin, building on its first layer which is Bitcoin's consensus mechanism on the blockchain level.</p>"
       }
     },
     {

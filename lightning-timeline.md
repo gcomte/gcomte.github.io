@@ -42,6 +42,9 @@
     .tl-timemarker-media-container {
         display: none !important;
     }
+    .tl-timeline .small-print {
+        font-size: 0.7rem;
+    }
 </style>
  
 
