@@ -118,6 +118,21 @@
     },
     {
       "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/blockstreamLightningSticker.jpg",
+        "caption": "Blockstream's famous Lightning Sticker"
+      },
+      "start_date": {
+        "day": "16",
+        "month": "1",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "Launch of the Blockstream Store",
+        "text": "<p>The <a href='https://store.blockstream.com/' target='_blank'>Blockstream Store</a> was a very early Lightning enabled store, created with the aim to \"provide a way for you to test Lightning and become a part of the micropayment revolution\", as described in <a href='https://blockstream.com/2018/01/16/lightning-charge/' target='_blank'>Blockstream's announcement</a>.</p><p>The store was selling stickers and t-shirts and was only accepting Lightning payments (at first).</p><p>At the time the Lightning Network and it's implementations were still seen as highly unstable, such that Blockstream developer Rusty Russell <a href='https://twitter.com/rusty_twit/status/953441963016990720' target='_blank'>warned people that it would be reckless</a> to use their own shop. This was the birth of the #reckless-hashtag, which became a popular self-description for early adopters of the Lightning Network.</p>"
+      }
+    },
+    {
+      "media": {
         "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/Laszlo.jpg",
         "caption": "Laszlo with his family and the ordered Pizzas"
       },
