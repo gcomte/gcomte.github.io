@@ -101,6 +101,22 @@
       }
     },
     {
+      "start_date": {
+        "day": "10",
+        "month": "10",
+        "year": "2016"
+      },
+      "end_date": {
+        "day": "11",
+        "month": "10",
+        "year": "2016"
+      },
+      "text": {
+        "headline": "Lightning Spec Summit 1.0",
+        "text": "<p>Since the Lightning Network is not the product of one single company but quite to the contrary a true grassroots movement that has emerged from the Bitcoin community, it is important that the different contributors coordinate and set standards. And that's exactly what happened for the first time, at the Lightning Network spec 1.0 in Milan.</p><p>The <a href='https://medium.com/@lightningnetwork/lightning-network-meeting-on-interoperability-and-specifications-ea49e47696a4' target='_blank'>outcome of the summit</a> set the foundation for interoperability between the different implementations. It included topics like transaction formats, the routing protocol (including onion routing), finding consensus on the naming of various protocol components, defining port numbers and the derivation of commitment hashes.</p>"
+      }
+    },
+    {
       "media": {
         "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/SegWitLogo.png",
         "caption": "SegWit logo",
