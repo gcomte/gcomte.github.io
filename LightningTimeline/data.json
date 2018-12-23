@@ -204,6 +204,17 @@
       }
     },
     {
+      "start_date": {
+        "day": "28",
+        "month": "04",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "First Lightning Network Hackday",
+        "text": "<p>The <a href='https://www.meetup.com/Bitcoin-Lab-Berlin/events/249392922/' target='_blank'>first</a> of a series of \"Hackdays\" took place in Berlin with about 100 attendees.</p><p>The event was not mainly focused on the development of the Lightning Network protocol, but rather on building tools and applications that make use of it.</p><p>The hackday was such a success, that <a href='http://www.fulmo.org/' target='_blank'>Fulmo</a> organized more of these events, 3 of them in the very same year.</p>"
+      }
+    },
+    {
       "media": {
         "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/eltoo_lightning-layers.png",
         "caption": "The Lightning Stack. Eltoo is a proposal that only concerns the updating mechanism.",
@@ -243,26 +254,6 @@
       "text": {
         "headline": "Lightning Network liquidity tops 100 BTC",
         "text": "<p>The Lightning Network liquidity of the visible network [ = announced channels only ] moved over 100 BTC for the first time, distributed in over 8'400 channels belonging to more than 2'400 nodes.</p>"
-      }
-    },
-    {
-      "media": {
-        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/LightningSpecSummit1-1Attendees.jpg",
-        "caption": "The attendees of the summit"
-      },
-      "start_date": {
-        "day": "08",
-        "month": "11",
-        "year": "2018"
-      },
-      "end_date": {
-        "day": "09",
-        "month": "11",
-        "year": "2018"
-      },
-      "text": {
-        "headline": "Lightning Spec Summit 1.1",
-        "text": "<p>The second Lightning Network specification summit took place in Adelaide, Australia, where <a href='https://github.com/ElementsProject/lightning' target='_blank'>c-lightning</a> developer Rusty Russell resides.</p><p>The attendees worked on <a href='https://github.com/lightningnetwork/lightning-rfc/wiki/Lightning-Specification-1.1-Proposal-States' target='_blank'>a variety of proposals</a> to bring the Lightning development forward.</p><p>The assembly found consensus on topics like <a href='https://lists.linuxfoundation.org/pipermail/lightning-dev/2018-February/000993.html' target='_blank'>Atomic Multi-Path Payments</a>, Dual-Funded Channels, Splicing (all explained <a href='https://bitcoinmagazine.com/articles/future-bitcoin-what-lightning-could-look/' target='_blank'>here</a>) and <a href='https://lists.linuxfoundation.org/pipermail/lightning-dev/2018-November/001596.html' target='_blank'>WUMBO</a>, the code word for removing the channel capacity limits ;-)</p>"
       }
     },
     {
