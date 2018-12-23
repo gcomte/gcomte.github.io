@@ -18,8 +18,66 @@
         "year": "2015"
       },
       "text": {
-        "headline": "Discussions about payment channels",
-        "text": "<p>The ideas about payment channels (a fundamental element of the Lightning Network) are almost as old as Bitcoin itself.</p><p>You can read more about the ideas and the people involved in the discussions in <a href='https://bitcoinmagazine.com/articles/history-lightning-brainstorm-beta/' target='_blank'>this article</a>.</p>"
+        "headline": "Laying the Foundation: Payment Channels",
+        "text": "<p>Payment channels is one of the most fundamental concept the Lightning Network builds upon. The ideas about payment channels are almost as old as Bitcoin itself, as summarized in <a href='https://bitcoinmagazine.com/articles/history-lightning-brainstorm-beta/' target='_blank'>this article</a>. Bitcoin founder Satoshi Nakamoto included a raw draft of payment channels in Bitcoin 0.1 already. </p>"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2011"
+      },
+      "end_date": {
+        "year": "2011"
+      },
+      "text": {
+        "headline": "Solving the Problem of Old Transaction Confirmations",
+        "text": "<p>Satoshi's draft for payment channels had one major pitfall: the design was not entirely secure. A user could collude with miners to have an old transaction confirmed, claiming a beneficial channel balance. </p> <p> User \"hashcoin\" <a href='https://bitcointalk.org/index.php?topic=25786.0' target='_blank'>proposes</a> in the Bitcointalk forum to exchange partially signed multisignature transactions and transactions with timelocks among channel participants to solve this problem.</p>"
+      }
+    },
+    {
+      "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/lightning_network.png",
+        "caption": "Payment Network",
+        "credit": "Source: <a href='https://blog.lightning.engineering/posts/2018/05/02/lightning-ux.html' target='_blank'>Lightning Labs Blog</a>"
+      },
+      "start_date": {
+        "day": "13",
+        "month": "7",
+        "year": "2011"
+      },
+      "end_date": {
+        "day": "13",
+        "month": "7",
+        "year": "2011"
+      },
+      "text": {
+        "headline": "Payment Network Concepts",
+        "text": "<p>Bitcoin Core developers Peter Todd and Gavin Andersen and now Lightning developer at Dutch Bitcoin exchange Corné Plooy were among the first to thinking about off-chain payment networks. Their <a href='https://bitcointalk.org/index.php?topic=28565.0' target='_blank'>early drafts</a> did not utilize payment channels yet.</p><p>Early proposals for payment networks that include payment channels (as by <a href='https://bitcointalk.org/index.php?topic=91732.0' target='_blank'> Meni Rosenfeld</a>,  <a href='https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2014-December/006988.html' target='_blank'>Peter Todd</a> and <a href='https://web.archive.org/web/20140908213132/http://www.strawpay.com:80/' target='_blank'>Strawpay</a>) had a major drawback: some trust was needed that a payment would be forwarded instead of keeping the money for its own. </p>"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2013"
+      },
+      "end_date": {
+        "year": "2013"
+      },
+      "text": {
+        "headline": "First Payment Channel Implementations",
+      "text": "<p>In early 2013, the first <a href='https://gist.github.com/jspilman/5424310' target='_blank'>proof of concept</a> for a payment channel is implemented by Jeremy Spilman. Mike Hearn and Matt Corallo <a href='https://bitcointalk.org/index.php?topic=244656.0' target='_blank'>refine</a> the concept for <a href='https://bitcoinj.github.io/' target ='_blank'>bitcoinj</a> by mid-2013.</p> "
+      }
+    },
+    {
+      "start_date": {
+        "month": "12",
+        "year": "2013"
+      },
+      "end_date": {
+        "year": "2013"
+      },
+      "text": {
+        "headline": "Bitcoin's Scaling Problems get apparent and boost Lightning Development",
+        "text": "When Bitcoin first exceeded the 1000 USD mark by the end of 2013 and transaction fees rose, the scaling issues of Bitcoin became evident. If Bitcoin really wants to take off, the scaling issue needs to be solved. Thoughts about a second layer solution gained momentum henceforward."
       }
     },
     {
@@ -114,6 +172,20 @@
       "text": {
         "headline": "SegWit activates",
         "text": "<p><a href='https://en.wikipedia.org/wiki/SegWit' target='_blank'>Segregated Witness</a> activated on the Bitcoin blockchain at block 481,824 as a soft fork.</p><p>This consensus relevant update was an important acquirement for the Lightning Network, since it solved an issue known as <a href='https://en.bitcoin.it/wiki/Transaction_malleability' target='_blank'>transaction malleability</a>, which was a fundamental precondition for implementing the Lightning Network.</p><p>This consensus change <a href='https://bitcoinmagazine.com/articles/long-road-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality/' target='_blank'>had be in the working for a long time and was subject to a lot of controversy</a>, which ended in it being forced upon its enemies in a <a href='https://en.wikipedia.org/wiki/User_activated_soft_fork' target='_blank'>user activated soft fork</a>.</p>"
+      }
+    },
+    {
+      "media": {
+        "url": " ",
+        "caption": ""
+      },
+      "start_date": {
+        "month": "1",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "First ever physical purchase on Lightning",
+        "text": "<p>The future is now - that's what Reddit user <a href='https://www.reddit.com/r/Bitcoin/comments/7rkunw/lightning_the_future_just_arrived_at_my_doorstep/' target='_blank'>btc_throwaway1337</a> must have thought when he was shopping his new AR300M VPN Router. This purchase was the first ever using Lightning Network's Mainnet (via lnd).</p> <p> And that's how he summarized his experience: \"It was all quick, easy, painless, and most importantly: instantaneous and fee-free!\"</p>"
       }
     },
     {
