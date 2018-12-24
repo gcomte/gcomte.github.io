@@ -1,3 +1,7 @@
+### Projects
+* [Lightning Timeline](https://gcomte.github.io/lightning-timeline)
+* [coinglacier.org](https://coinglacier.org)
+
 ### Slides
 
 Slides of my workshops and talks.
