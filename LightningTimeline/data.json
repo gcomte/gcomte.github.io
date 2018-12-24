@@ -12,13 +12,10 @@
   "events": [
     {
       "start_date": {
-        "year": "2009"
-      },
-      "end_date": {
         "year": "2015"
       },
       "text": {
-        "headline": "Discussions about payment channels",
+        "headline": "Early discussions about payment channels",
         "text": "<p>The ideas about payment channels (a fundamental element of the Lightning Network) are almost as old as Bitcoin itself.</p><p>You can read more about the ideas and the people involved in the discussions in <a href='https://bitcoinmagazine.com/articles/history-lightning-brainstorm-beta/' target='_blank'>this article</a>.</p>"
       }
     },
