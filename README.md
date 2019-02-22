@@ -32,5 +32,5 @@ Lightning BTC:
 BTC: [bc1qpj3tru2c7qah62tf887encjxjm34l35rxx2h6h](bitcoin:bc1qpj3tru2c7qah62tf887encjxjm34l35rxx2h6h?label=Gabriel%20Comte)<br />
 
 <a href="https://github.com/gcomte">
-    <img width="100" alt="GitHub" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png">
+    <img width="100" alt="GitHub" src="https://octodex.github.com/images/octobiwan.jpg">
 </a>
