@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+body {
+    background: url('https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/DavidsLightning.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+.main-content {
+    max-width:100%;
+    padding: 0 0;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.2em;
+    margin: 2.5rem 25%;
+    color: #FEDE36;
+    background: rgba(0,0,0,0.5);
+}
+@media only screen and (max-width: 1024px) {
+    h1 {
+        display:none;
+    }
+}
+@media only screen and (max-width: 1380px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+.site-footer{
+    border-top: none;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 2rem;
+}
+.site-footer-credits {
+    text-align: center;
+    padding: 0 1rem;
+    background: rgba(0,0,0,0.8);
+    color: #819198;
+}
+.site-footer-credits a{
+    color: #1e6bb8;
+    text-decoration: none;
+}
+#timeline-embed {
+    width: 100%;
+    height: 600px
+}
+.tl-timemarker-media-container {
+    display: none !important;
+}
+.tl-timeline .small-print {
+    font-size: 0.7rem;
+}
