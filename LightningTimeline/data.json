@@ -18,7 +18,7 @@
       },
       "text": {
         "headline": "Early discussions about payment channels",
-        "text": "<p>Ideas about payment channels (a fundamental building block of the Lightning Network) are almost as old as Bitcoin itself, as they were already <a href='https://github.com/trottier/original-bitcoin/blob/master/src/main.cpp#L434' target='_blank'>considered by Satoshi Nakamoto</a> himself.</p><p>Satoshi's design for payment channels was however not entirely trustless; a user could collude with miners to have an old channel state confirmed, and thus cheat on the channel-counterparty.</p>"
+        "text": "<p>Ideas about payment channels (a fundamental building block of the Lightning Network) are almost as old as Bitcoin itself, as they were already <a href='https://github.com/trottier/original-bitcoin/blob/master/src/main.cpp#L434' target='_blank'>considered by Satoshi Nakamoto</a>.</p><p>Satoshi's design for payment channels was however not entirely trustless; a user could collude with miners to have an old channel state confirmed, and thus cheat on the channel-counterparty.</p>"
       }
     },
     {
