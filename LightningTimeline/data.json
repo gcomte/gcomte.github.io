@@ -12,11 +12,39 @@
   "events": [
     {
       "start_date": {
-        "year": "2015"
+        "day": "3",
+        "month": "1",
+        "year": "2009"
       },
       "text": {
         "headline": "Early discussions about payment channels",
-        "text": "<p>The ideas about payment channels (a fundamental element of the Lightning Network) are almost as old as Bitcoin itself.</p><p>You can read more about the ideas and the people involved in the discussions in <a href='https://bitcoinmagazine.com/articles/history-lightning-brainstorm-beta/' target='_blank'>this article</a>.</p>"
+        "text": "<p>Ideas about payment channels (a fundamental building block of the Lightning Network) are almost as old as Bitcoin itself, as they were already <a href='https://github.com/trottier/original-bitcoin/blob/master/src/main.cpp#L434' target='_blank'>considered by Satoshi Nakamoto</a> himself.</p><p>Satoshi's design for payment channels was however not entirely trustless; a user could collude with miners to have an old channel state confirmed, and thus cheat on the channel-counterparty.</p>"
+      }
+    },
+    {
+      "start_date": {
+        "day": "4",
+        "month": "7",
+        "year": "2011"
+      },
+      "text": {
+        "headline": "Making payment channels fully trustless",
+        "text": "<p>bitcointalk.org user \"hashcoin\" <a href='https://bitcointalk.org/index.php?topic=25786.0' target='_blank'>proposed</a> that channel participants could exchange partially signed multisignature transactions and transactions with timelocks to make payment channels resistant against miner collusion attacks.</p>"
+      }
+    },
+    {
+      "start_date": {
+        "day": "13",
+        "month": "7",
+        "year": "2011"
+      },
+      "end_date": {
+        "month": "4",
+        "year": "2015"
+      },
+      "text": {
+        "headline": "Payment network concepts",
+        "text": "<p>Many more ideas and concepts emerged from the Bitcoin community during the following years, from people like <a href='https://bitcointalk.org/index.php?topic=28565.0' target='_blank'>Corné Plooy (payment network)</a>, <a href='https://bitcointalk.org/index.php?topic=91732.0' target='_blank'>Meni Rosenfeld</a>, <a href='https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2013-April/002433.html' target='_blank'>Jeremy Spillman</a>, <a href='https://bitcointalk.org/index.php?topic=814770.msg9185225#msg9185225' target='blank'>Alex Akselrod</a>, <a href='https://www.tik.ee.ethz.ch/file/716b955c130e6c703fac336ea17b1670/duplex-micropayment-channels.pdf' target='_blank'>Christian Decker and Roger Wattenhofer</a> and others.</p><p>You can find mor details in <a href='https://bitcoinmagazine.com/articles/history-lightning-brainstorm-beta/' target='_blank'>this article</a>.</p>"
       }
     },
     {
@@ -127,6 +155,21 @@
       "text": {
         "headline": "SegWit activates",
         "text": "<p><a href='https://en.wikipedia.org/wiki/SegWit' target='_blank'>Segregated Witness</a> activated on the Bitcoin blockchain at block 481,824 as a soft fork.</p><p>This consensus relevant update was an important acquirement for the Lightning Network, since it solved an issue known as <a href='https://en.bitcoin.it/wiki/Transaction_malleability' target='_blank'>transaction malleability</a>, which was a fundamental precondition for implementing the Lightning Network.</p><p>This consensus change <a href='https://bitcoinmagazine.com/articles/long-road-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality/' target='_blank'>had be in the working for a long time and was subject to a lot of controversy</a>, which ended in it being forced upon its enemies in a <a href='https://en.wikipedia.org/wiki/User_activated_soft_fork' target='_blank'>user activated soft fork</a>.</p>"
+      }
+    },
+    {
+      "media": {
+        "url": "https://i.imgur.com/JvxG9nI.jpg",
+        "caption": "This router was the first ever physical good bought over Lightning"
+      },
+      "start_date": {
+        "day": "15",
+        "month": "1",
+        "year": "2018"
+      },
+      "text": {
+        "headline": "First ever physical purchase over Lightning",
+        "text": "<p>The future is now - that's what Reddit user btc_throwaway1337 must have thought when he <a href='https://www.reddit.com/r/Bitcoin/comments/7rkunw/lightning_the_future_just_arrived_at_my_doorstep/' target='_blank'>bought his new router</a>. This was the first ever purchase of a physical good over the Mainnet Lightning Network. His wallet of choice was LND.</p><p>He summarized his experience with the following words: \"It was all quick, easy, painless, and most importantly: instantaneous and fee-free!\"</p>"
       }
     },
     {
