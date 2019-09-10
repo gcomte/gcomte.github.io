@@ -67,11 +67,45 @@ Danach weiter wie folgt:
 https://github.com/rootzoll/raspiblitz#setup-process-detailed-documentation
 
 
-----
+# Zu beachten
 
-Was noch fehlt:
+### Tor
 
-* Gummelis
-* Papier und Schreiber für Seed
+![Use Tor](images/useTor.png)
+
+Verwende Tor für Deine Lightning Node. Dies hilft Dir nicht nur, Deine Privatsphäre zu schützen, sondern boxt sich auch durch Deine FireWall Zuhause durch, ohne dass Du Ports öffnen musst, oder eine statische IP brauchst.
+
+### Verwende die vorhandene Blockchain!
+
+![Trust the given Blockchain](images/useBlockchainOnHDD.png)
+
+Wir haben Euch die Blockchain bereits auf die HDD kopiert, da es Tage dauert sie zu syncen. Wählt hier _nicht_ "DELETE"!
+
+### Einloggen per SSH Key
+
+Passwörter sind böse. Sie sind mühsamer und unsicherer als Public Key Cryptography!
+
+Während des Prozesses werdet Ihr aufgefordert werden, Euch auszuloggen und neu per ssh einzuloggen. Nutzt diese Möglichkeit gleich um was anderes zu tun!
+
+Nämlich könnt ihr folgendes in euer lokals Terminal einfügen:
+
+    ssh-copy-id admin@[Deine IP]
+    
+Somit könnt Ihr von Eurem Laptop künftig ohne Passwort auf den Raspi verbinden.
+Zusätlich könnt Ihr gleich noch einen Eintrag in Eure SSH config machen (~/.ssh/config)
+
+```bash
+Host [DEIN_HOST]
+    Hostname [DEINE_IP]
+    User admin
+```
+
+Nun könnt Ihr euch folgendermassen einloggen:
+
+    ssh [DEIN_HOST]
+    
+Zuhause müsst Ihr die IP in der Config dann natürlich anpassen.
+
+
 
 
