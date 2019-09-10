@@ -107,5 +107,17 @@ Nun könnt Ihr euch folgendermassen einloggen:
 Zuhause müsst Ihr die IP in der Config dann natürlich anpassen.
 
 
+# Some more fun
 
+ - [Channels (zueinander) eröffnen](https://etherpad.net/p/zuv1rz8kNP)
+ - Zap (Desktop oder Smartphone) einrichten
+ - [Static Channel Backups](https://github.com/darwin/lnd-auto-backup) einrichten
+ - [(Altruist) WatchTower](https://github.com/lightningnetwork/lnd/blob/master/docs/watchtower.md) einrichten
+ - [Joule](https://lightningjoule.com/) einrichten
+ - SHOPPEN!!
+   - https://yalls.org
+   - https://www.lapps.co/all-time
+ - https://1ml.com anschauen
+ 
+ 
 
