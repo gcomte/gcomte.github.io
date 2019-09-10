@@ -115,9 +115,9 @@ Zuhause müsst Ihr die IP in der Config dann natürlich anpassen.
  - [(Altruist) WatchTower](https://github.com/lightningnetwork/lnd/blob/master/docs/watchtower.md) einrichten
  - [Joule](https://lightningjoule.com/) einrichten
  - SHOPPEN!!
-   - https://yalls.org
-   - https://www.lapps.co/all-time
- - https://1ml.com anschauen
+   - [Y'alls](https://yalls.org)
+   - [Lapps.co](https://www.lapps.co/all-time)
+ - [1ml.com](https://1ml.com) anschauen
  
  
 
