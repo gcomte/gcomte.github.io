@@ -107,7 +107,7 @@ Nun könnt Ihr euch folgendermassen einloggen:
 Zuhause müsst Ihr die IP in der Config dann natürlich anpassen.
 
 
-# Some more fun
+# Some more fun ⚡
 
  - [Channels (zueinander) eröffnen](https://etherpad.net/p/zuv1rz8kNP)
  - Zap (Desktop oder Smartphone) einrichten
