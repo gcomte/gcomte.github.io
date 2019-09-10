@@ -4,7 +4,7 @@
 
 ![Ventilator](images/AssembleFan.jpg)
 
-https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-fan-shim
+[Anleitung](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-fan-shim)
 
 * Eine Mutter bleibt übrig
 * Ventilator noch nicht auf Raspi pappen
@@ -15,7 +15,7 @@ https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-fan-shim
 
 ![Case](images/AssembleCase.jpg)
 
-https://www.youtube.com/watch?v=utk3cjzCLog
+[Anleitung](https://www.youtube.com/watch?v=utk3cjzCLog)
 
 * Eine Mutter bleibt übrig
 * Jedes Element hat eine Schutzfolie drauf, die entfernt werden soll
@@ -64,7 +64,7 @@ Auf dem Display sollte nun ein blauer Screen mit der IP erscheinen:
 
 Danach weiter wie folgt:
 
-https://github.com/rootzoll/raspiblitz#setup-process-detailed-documentation
+[RaspiBlitz Anleitung](https://github.com/rootzoll/raspiblitz#setup-process-detailed-documentation)
 
 
 # Zu beachten
