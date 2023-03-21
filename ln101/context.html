@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Context</h2>
+				<ul>
+					<li>Bitcoin released on Jan 3, 2009</li>
+					<li>Lightning concept <a href="https://www.youtube.com/watch?v=8zVzw912wPo" target="_blank">proposed</a> on February 2015 (<a href="https://gcomte.github.io/lightning-timeline" target="_blank">LN Timeline</a>)</li>
+				</ul>
+			</section>
+			<section>
+				<h2>The Lightning Network</h2>
+				<ul>
+					<li>A scaling solution for Bitcoin</li>
+					<li>Built on top of layer 1</li>
+					<li>The money being sent is also BTC</li>
+				</ul>
+			</section>
+			<section>
+				<h2>LN characteristics</h2>
+				<ul>
+					<li>Synchronous payments</li>
+					<li>Fees based on payment amount rather than transaction size in bytes</li>
+					<li>As with Layer 1, transactions are fully settled</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Technical perspective</h2>
+				<ul>
+					<li>Separate network alongside Layer 1 network</li>
+					<li>Lightning anchors into Layer 1</li>
+					<li>Payment synchronicity requires availability of payment receiver</li>
+					<li>Interoperability between Layer 1 and 2 is challenging (UX)</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
