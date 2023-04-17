@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+                                <h2>Privacy</h2>
+                                <p>The freedom to selectively reveal one’s self</p>
+                        </section>
+			<section>
+				<h2>Privacy on L1</h2>
+				<p>Blockchain is public!</p>
+				<ul>
+					<li>L1 is pseudonymous, <em>not</em> anonymous</li>
+					<li>Linking of addresses to identities (KYC)</li>
+					<li>Tracking movement of identified coins</li>
+					<li>IP tracking (less relevant)</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Improve your L1 privacy</h2>
+				<ul>
+					<li>Limit linkage of your identity to your coins</li>
+					<li>Try obfuscating already identified coins</li>
+					<li>Don't link 'anonymous' coins with already identified coins</li>
+					<li>DON'T REUSE ADDRESSES</li>
+					<li>Don't leak your IP</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Privacy on LN</h2>
+				<ul>
+					<li>Payments are (pretty) private</li>
+					<li>Your identity (public key) never changes</li>
+					<li>Announced channels are tied to your public key</li>
+					<li>Probing is real</li>
+					<li>Unannounced channels are (pretty) private</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Welcome to the real world</h2>
+				<ul>
+					<li>Privacy is hard</li>
+					<li>Privacy is costly</li>
+					<li>Privacy is not what your average user values!</li>
+					<li>... Let's look at the real world</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Privacy at ACME: L1</h2>
+				<ul>
+					<li>Address balances -> ACME's block explorer</li>
+					<li>User leaks IP for his addresses</li>
+					<li>User leaks identity on Fiat exchange</li>
+					<li>No obfuscation techniques are being used</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Privacy at ACME: LN</h2>
+				<ul>
+					<li>User opens channels with ACME only</li>
+					<li>User leaks on-chain addresses</li>
+					<li>User leaks LN balance</li>
+					<li>User leaks how much he sends</li>
+					<li>Does <em>not</em> leak where he sends</li>
+				</ul>
+			</section>
+	</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
