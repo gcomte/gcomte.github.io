@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>The mnemonic</h2>
+            Mnemonic and seed are not the same thing!
+        </section>
+        <section>
+            <section>
+                <h2>The mnemonic</h2>
+                <p><em>gravity often ridge visit alarm audit bag spider recycle expose announce hover rug wrong proud</em>
+                </p>
+            </section>
+            <section>
+                <h2>The mnemonic</h2>
+                <p>Defined in <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki" , target="_blank">Bip39</a>
+                </p>
+                <p>It is a list of words from a dictionary:</p>
+                <ul>
+                    <li>12 words</li>
+                    <li>15 words</li>
+                    <li>18 words</li>
+                    <li>21 words</li>
+                    <li>24 words</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Why do we need it?</h2>
+                <ul>
+                    <li><em>Multiple</em> key pairs are required for different purposes withing the same wallet</li>
+                    <li>The seed is a source of randomness to deterministically derive keys from</li>
+                    <li>Every seed is completely random</li>
+                    <li>From every seed the exact same keys are derived (pure function)</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h2>The seed</h2>
+            <p>Basically the binary form of the list of words</p>
+        </section>
+        <section>
+            <section>
+                <h2>What can we derive from the mnemonic?</h2>
+                <ul>
+                    <li>"Regular" Bitcoin addresses (Layer 1)</li>
+                    <li>
+                        <li>Scripts need to be remembered somewhere else!</li>
+                    </li>
+                    <li>The Lightning key pair</li>
+                    <li>
+                    <ul>
+                        <li>Public key = node id</li>
+                        <li>Stays always the same</li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <h2>Other essential data than can<em>not</em> be retrieved from the seed</h2>
+                <p>Crucial for accessing funds</p>
+                <ul>
+                    <li>Channel states</li>
+                    <li>Revocation keys</li>
+
+                </ul>
+                <p>Some non-sensitive data:</p>
+                <ul>
+                    <li>Exchange rates</li>
+                    <li>Invoices</li>
+                    <li>...</li>
+                </ul>
+                </li>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Importing lipa wallet to a new lipa app</h2>
+                <p>Some things are restored from the seed</p>
+                <ul>
+                    <li>Key pairs (Layer 1 funds)</li>
+                    <li>Node identity</li>
+                    <li>Keys for data encryption (Lipa Backend)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Importing lipa wallet to a new lipa app</h2>
+                <p>The rest is restored from Lipa backend:</p>
+                <ul>
+                    <li>Channel states (-> Lightning Wallet balance)</li>
+                    <li>Transaction history</li>
+                    <li>...</li>
+                </ul>
+                <p><em>Old app cannot be used anymore!</em></p>
+            </section>
+            <section>
+                <h2>Importing lipa mnemonic to another on-chain wallet</h2>
+                <p>Lightning wallet</p>
+                <ul>
+                    <li>Non-Lipa wallet cannot access it</li>
+                    <li>Likely harmless</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Importing lipa mnemonic to another on-chain wallet</h2>
+                <p>Lightning wallet</p>
+                <ul>
+                    <li>Non-Lipa wallet cannot access it</li>
+                    <li>Likely harmless</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Importing lipa mnemonic to another Lightning wallet</h2>
+                <ul>
+                    <li>Will not work properly because information is missing</li>
+                    <li>Cannot be used to recover funds / working wallet</li>
+                    <li>Potentially dangerous because it might interfere with Lipa wallet (if it's still being used)</li>
+                </ul>
+            </section>
+        </section>
+    </div>
+</div>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>
