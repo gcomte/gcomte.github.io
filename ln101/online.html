@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>The need for being online</h2>
+        </section>
+        <section>
+            <section>
+                <h2>L2 protocols</h2>
+                <p><em>All off-chain protocols assume the user remains online and synchronised with the network</em></p>
+            </section>
+            <section>
+                <h2>Lightning nodes need to be online for</h2>
+                <ul>
+                    <li>Opening channels</li>
+                    <li>Sending payments</li>
+                    <li>Receiving payments</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Channel closes</h2>
+                <ul>
+                    <li>Cooperative closes when both nodes are online</li>
+                    <li>Counterparty may publish commitment tx!
+                        <ul>
+                            <li>at all times</li>
+                            <li>unilaterally</li>
+                            <li>maliciously!</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Time to react</h2>
+                <ul>
+                    <li>Node needs to scan blockchain for commitment tx</li>
+                    <li>Node gets a time window to react if required</li>
+                    <ul>
+                        <li>Configurable</li>
+                        <li>Usually about 144 blocks (1 day)</li>
+                        <li>Upper limit mostly 2 weeks</li>
+                    </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>User burden</h2>
+                <p>Does that mean a user needs to open his LN wallet at least daily?</p>
+                <p>YES! ... but</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Watchtowers!</h2>
+                <p>3rd party that can watch the blockchain for a user</p>
+                <p>Unofficial BOLT: <a href="https://github.com/sr-gi/bolt13/blob/master/13-watchtowers.md">BOLT13</a></p>
+            </section>
+            <section>
+                <h2>Process</h2>
+                <p>User must provide WT with:</p>
+                <ul>
+                    <li>A transaction that spends the commitment tx of the latest channel state</li>
+                    <li>And sends these funds to the user</li>
+                    <li>Including the penalty part</li>
+                    <li>For every LN transaction</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Privacy</h2>
+                <ul>
+                    <li>Tx is encrypted</li>
+                    <li>The key is: hash(commitment-tx-id)</li>
+                    <li>WT can only decrypt when there is an actual breach</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Watchtowers help every user</h2>
+                <ul>
+                    <li>Every user can use (multiple) WTs</li>
+                    <li>Counterparty never knows whether a WT is being used</li>
+                    <li>Uncertainty incentivizes honest behavior</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Lipa wallet (currently)</h2>
+                <ul>
+                    <li>Lipa is the only channel counterparty</li>
+                    <li>User needs protection against Lipa</li>
+                    <li>It is in Lipa's control to be honest or not
+                        <ul>
+                            <li>Internal attackers possible</li>
+                        </ul>
+                    </li>
+                    <li>Issue is not immediately pressing</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Who runs a WT for Lipa users?</h2>
+                <ul>
+                    <li>Lipa ❌</li>
+                    <li>3rd party ❌</li>
+                    <li>Watchtower chosen by user ✔</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Current WT implementations</h2>
+                <ul>
+                    <li>Eye of Satoshi</li>
+                    <li>LND's WT</li>
+                    <li>Electrum's WT</li>
+                </ul>
+            </section>
+        </section>
+    </div>
+</div>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>
