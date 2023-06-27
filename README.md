@@ -6,6 +6,7 @@
 
 Slides of my workshops and talks.
 
+* [CUBO+](https://gcomte.github.io/cubo)
 * [LN 101](https://gcomte.github.io/ln101)
 * [Bitcoin Basics](https://gcomte.github.io/bitcoin-basics/)
 
