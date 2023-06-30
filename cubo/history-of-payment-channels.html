@@ -47,9 +47,8 @@
 			<div class="slides">
 				<section data-transition="convex">
 					<h2>History of Payment Channels</h2>
-					<p>Lorem ipsum</p>
 				</section>
-				<section>
+				<section data-transition="convex">
 					<section data-transition="convex">
 						<h2>The problem</h2>
 						<p class="fragment">Bitcoin is a broadcast network</p>
@@ -66,6 +65,121 @@
 					<section data-transition="convex">
 						<h2>Solution</h2>
 						<p>Omitting (some) data from the broadcast protocol</p>
+					</section>
+				</section>
+				<section data-transition="convex">
+					<section data-transition="convex">
+						<h2>Payment Channels</h2>
+						<blockquote cite="https://en.bitcoin.it/wiki/Payment_channels">
+							A Micropayment Channel or Payment Channel is class of techniques designed to allow users to make multiple Bitcoin transactions without commiting all of the transactions to the Bitcoin blockchain.
+						</blockquote>
+						<p>Source: <a href="https://en.bitcoin.it/wiki/Payment_channels">https://en.bitcoin.it/wiki/Payment_channels</a></p>
+					</section>
+					<section data-transition="convex">
+						<h2>Payment Channels</h2>
+						<ul>
+							<li>Take (some) transactions <em>off-the-chain</em></li>
+							<li class="fragment">Leave the <em>option</em> for on-chain enforcement</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Metaphor</h2>
+						<img src="images/GoldDollar.jpg" />
+					</section>
+				</section>
+				<section data-transition="convex">
+					<section data-transition="none">
+						<h2>Satoshi's payment channels</h2>
+						<ul>
+							<li>Satoshi already considered payment channels</li>
+							<li class="fragment">Deployed required primitives in first version</li>
+							<li class="fragment">Design consequences subsist until today</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Satoshi's payment channels</h2>
+						<img src="images/TxWithNSequenceHighlighted.png" />
+						<p>TX <a href="https://blockstream.info/tx/aa047b11f081c3b8ca8f4732a42e02ce8ac19e44495211cbee4ab00c01c6e603">aa047b11f0...</a></p>
+					</section>
+					<section data-transition="convex">
+						<h2>Scenario</h2>
+						<ol>
+							<li>You are at a bar</li>
+							<li class="fragment">You want to order multiple beers sequentially</li>
+							<li class="fragment">You don't have any trust relationship with the bartender</li>
+							<li class="fragment">The bartender wants to be paid directly for every beer</li>
+							<li class="fragment">You don't want to pay so many transaction fees</li>
+						</ol>
+					</section>
+					<section data-transition="none">
+						<h2>First beer</h2>
+						<img src="images/SatoshiChannelState1.png" />
+						<ul>
+							<li class="fragment">TX <em>could</em> be broadcasted</li>
+							<li class="fragment">It's enough to just pass the TX to the bartender</li>
+						</ul>
+					</section>
+					<section data-transition="none">
+						<h2>Second beer</h2>
+						<img src="images/SatoshiChannelState2.png" />
+						<ul>
+							<li>TX <em>could</em> be broadcasted</li>
+							<li>It's enough to just pass the TX to the bartender</li>
+						</ul>
+					</section>
+					<section data-transition="none">
+						<h2>Third beer</h2>
+						<img src="images/SatoshiChannelState3.png" />
+						<ul>
+							<li>TX <em>could</em> be broadcasted</li>
+							<li>It's enough to just pass the TX to the bartender</li>
+						</ul>
+					</section>
+					<section data-transition="none">
+						<h2>Nth beer</h2>
+						<img src="images/SatoshiChannelStateN.png" />
+						<p>Can be replaced until <span style="font-weight:bold">nLockTime</span></p>
+					</section>
+					<section data-transition="convex">
+						<h2>Channel close</h2>
+						<h3>Unilateral</h3>
+						<ul>
+							<li>Bartender waits until <span style="font-weight:bold">nLockTime</span> and publishes last TX</li>
+							<li class="fragment">If multiple TXs are published, miners will pick the TX with the highest <span style="font-weight:bold">nSequence</span></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Channel close</h2>
+						<h3>Cooperatively</h3>
+						<p>You create a final TX and remove <span style="font-weight:bold">nLockTime</span></p>
+					</section>
+					<section data-transition="convex">
+						<h2>Shortcomings</h2>
+						<ul>
+							<li>Unidirectional payment flow</li>
+							<li class="fragment">Finite channel lifetime</li>
+							<li class="fragment"><span class="fragment highlight-red">Not secure!</span></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Security issue</h2>
+						<ul>
+							<li>Miner cannot be held accountable</li>
+							<li class="fragment">May disregard <span style="font-weight:bold">nLockTime</span> field</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Conclusion</h2>
+						<ul>
+							<li class="fragment">TX can be replaced by newer versions until <span style="font-weight:bold">nLockTime</span></li>
+							<li class="fragment">Sender and receiver exchange entirely valid Bitcoin TXs (offline)</li>
+							<li class="fragment">Only one of these TXs can be settled (mined into the Blockchain)</li>
+							<li class="fragment">Scheme is not secure (miner collusion)</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Any questions so far?</p>
 					</section>
 				</section>
 			</div>
