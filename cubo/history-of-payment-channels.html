@@ -162,6 +162,14 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
+						<h2>Unidirectional payment flow</h2>
+						<ul>
+							<li>A naive solution to allow for bi-directional payment flows is to simply create 2 channels in the opposite direction respecitively</li>
+							<li class="fragment">Problem: You cannot send the funds you received, instead you need to close and reopen channels.</li>
+							<li class="fragment">Money within a channel can only be transferred once</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
 						<h2>Security issue</h2>
 						<ul>
 							<li>Miner cannot be held accountable</li>
@@ -182,6 +190,85 @@
 						<p>Any questions so far?</p>
 					</section>
 				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Intermediate ideas and implementations</h3>
+						<p>After Satoshi's flawed idea, a lot of innovation happened on payment channels</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Using Multisig</h3>
+						<p>In 2011 Bitcointalk user <em>hashcoin</em> <a href="https://bitcointalk.org/index.php?topic=25786.0">proposed a scheme</a> to fix miner collusion</p>
+						<p class="fragment">Spilman <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2013-April/002433.html">reintroduced similar scheme in 2013</a> and provided a PoC implementation</p>
+						<p class="fragment">Schmemes use 2-of-2 multisig to resolve trust issues</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Spilman | Channel lifecycles</h3>
+						<p>With Spilman channels we can already see the emergence of the payment channel lifecycles which subsist until today:</p>
+						<ul>
+							<li>Channel setup phase | on-chain</li>
+							<li>Payments through channel | off-chain</li>
+							<li>Channel closing | on-chain</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Spilman | Setup phase</h3>
+						<ol>
+							<li>You craft a setup TX that sends funds to a 2-of-2 MultiSig controlled by bartender and yourself</li>
+							<li class="fragment">You DON'T publish that TX yet</li>
+							<li class="fragment">You craft a TX that sends all the funds within the setup transaction back to you at <span style="font-weight:bold">nLockTime T</span></li>
+							<li class="fragment">You ask the bartender sign that closing TX for you</li>
+							<li class="fragment">Now that you have a security to reclaim your funds, you publish the setup TX</li>
+							<li class="fragment">Wait for the TX to confirm on the blockchain</li>
+							<li class="fragment">The channel is now setup and can be used until <span style="font-weight:bold">nLockTime T</span></li>
+						</ol>
+					</section>
+					<section data-transition="none">
+						<h3>Spilman | Payments phase</h3>
+						<ol>
+							<li class="fragment">You start spending crafting TXs that spend the funding TX</li>
+							<li class="fragment">You spend it such, that some funds go to the bartender and some go to yourself</li>
+							<li class="fragment">You craft one such TX for each off-chain payment</li>
+							<li class="fragment">You sign these TXs and pass them to the bartender</li>
+							<li class="fragment">He could publish these TXs at all times, but he does NOT</li>
+						</ol>
+					</section>
+					<section data-transition="convex">
+						<h3>Spilman | Payments phase</h3>
+						<img src="images/Spilman.png" />
+					</section>
+					<section data-transition="none">
+						<h3>Channel closing</h3>
+						<ul>
+							<li>Bartender signs and publishes the last channel state (which is most lucrative to him)</li>
+							<li class="fragment">He must do that before the channel expires!</li>
+							<li class="fragment">If the channel hasn't been used at all, you sign and publish the Reclaim TX</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Conclusion</h3>
+						<ol>
+							<li>Miner collusion is fixed</li>
+							<li class="fragment">Payments can still only flow into one direction</li>
+							<li class="fragment">Payment channel still has a limited lifetime</li>
+							<li class="fragment">A channel lifetime still needs to be committed to in advance</li>
+							<li class="fragment">Bartender needs to act before channel expires</li>
+						</ol>
+					</section>
+					<section data-transition="convex">
+						<h3>Incentives rather than nSequence</h3>
+						<p>Why is it that the newest channel state is being published?</p>
+						<ul>
+							<li class="fragment">Order is NOT enforced by miners through <span style="font-weight:bold">nSequence</span></li>
+							<li class="fragment">Bartender publishes newest state because it is the most lucrative for him</li>
+							<li class="fragment">You cannot sign any state because you don't have the bartenders signature</li>
+							<li class="fragment">Premature publishing of Reclaim TX is prevented by <span style="font-weight:bold">nLockTime</span></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>SegWit required</h3>
+						<p>Spilman channels and other proposals required SegWit to fix transaction malleability</p>
+						<p class="fragment">SegWit was activated in 2017</p>
+					</section>
 			</div>
 		</div>
 
