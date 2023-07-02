@@ -162,18 +162,10 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Unidirectional payment flow</h2>
-						<ul>
-							<li>A naive solution to allow for bi-directional payment flows is to simply create 2 channels in the opposite direction respecitively</li>
-							<li class="fragment">Problem: You cannot send the funds you received, instead you need to close and reopen channels.</li>
-							<li class="fragment">Money within a channel can only be transferred once</li>
-						</ul>
-					</section>
-					<section data-transition="convex">
 						<h2>Security issue</h2>
 						<ul>
 							<li>Miner cannot be held accountable</li>
-							<li class="fragment">May disregard <span style="font-weight:bold">nLockTime</span> field</li>
+							<li class="fragment">May disregard <span style="font-weight:bold">nSequence</span> field</li>
 						</ul>
 					</section>
 					<section data-transition="convex">
@@ -199,7 +191,7 @@
 						<h3>Using Multisig</h3>
 						<p>In 2011 Bitcointalk user <em>hashcoin</em> <a href="https://bitcointalk.org/index.php?topic=25786.0">proposed a scheme</a> to fix miner collusion</p>
 						<p class="fragment">Spilman <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2013-April/002433.html">reintroduced similar scheme in 2013</a> and provided a PoC implementation</p>
-						<p class="fragment">Schmemes use 2-of-2 multisig to resolve trust issues</p>
+						<p class="fragment">Schemes use 2-of-2 multisig to resolve trust issues</p>
 					</section>
 					<section data-transition="convex">
 						<h3>Spilman | Channel lifecycles</h3>
@@ -225,7 +217,7 @@
 					<section data-transition="none">
 						<h3>Spilman | Payments phase</h3>
 						<ol>
-							<li class="fragment">You start spending crafting TXs that spend the funding TX</li>
+							<li >You start spending crafting TXs that spend the funding TX</li>
 							<li class="fragment">You spend it such, that some funds go to the bartender and some go to yourself</li>
 							<li class="fragment">You craft one such TX for each off-chain payment</li>
 							<li class="fragment">You sign these TXs and pass them to the bartender</li>
@@ -274,6 +266,18 @@
 						<p class="fragment">SegWit was activated in 2017</p>
 					</section>
 					<section data-transition="convex">
+						<h2>Bi-directional payment flows</h2>
+						<ul>
+							<li class="fragment">A naive solution to allow for bi-directional payment flows is to simply create 2 channels in the opposite direction respecitively</li>
+							<li class="fragment">Problem: You cannot send the funds you received, instead you need to close and reopen channels.</li>
+							<li class="fragment">Money within a channel can only be transferred once</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Problem</h2>
+						<p>The already existing problem of the limited lifetime of a channel gets even worse!</p>
+					</section>
+					<section data-transition="convex">
 						<h3>Bi-directional channels</h3>
 						<p>Alex Akselrod had  <a href="https://bitcointalk.org/index.php?topic=91732.0">the idea</a> to let funds flow bi-directionally in channels by using decreasing <span style="font-weight:bold">nLockTime</span>s.</p>
 					</section>
@@ -304,6 +308,156 @@
 					<section data-transition="convex">
 						<h2>Questions?</h2>
 						<p>Any questions so far?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Present: Lightning Network payment channels</h3>
+						<p><a href="https://web.archive.org/web/20150228162703/http://lightning.network/">"The Bitcoin Lightning Network" paper</a> released in February 2015 (<a href="https://lightning.network/lightning-network-paper.pdf">updated version</a>)</p>
+						<p class="fragment">Most important finding was routing, not new channel techniques</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Characteristics</h3>
+						<ul>
+							<li>Bi-directional payment flows</li>
+							<li class="fragment">Unlimited lifetime</li>
+						</ul>
+					</section>
+					<section data-transition="none">
+						<h3>Channel setup</h3>
+						<ol>
+							<li>The funder crafts a setup TX that sends funds to a 2-of-2 MultiSig controlled by funder and remote</li>
+							<li class="fragment">He only publishes the funding TX once he has a signed reclaim TX</li>
+							<li class="fragment">The opened channel can be used <span style="font-weight:bold">indefinitely</span></li>
+						</ol>
+					</section>
+					<section data-transition="none">
+						<h3>Channel setup</h3>
+						<img src="images/LNsetup.png" />
+						<p>More details on <a href="https://ellemouton.com/posts/open_channel_pre_taproot/">Elle Mouton</a></p>
+					</section>
+					<section data-transition="convex">
+						<h3>LN payments</h3>
+						<img src="images/LNchannels.png" />
+						<p>More details on <a href="https://ellemouton.com/posts/updating-state/">Elle Mouton</a></p>
+					</section>
+					<section data-transition="convex">
+						<h3>The revocation key</h3>
+						<ul>
+							<li>Uses ECC magic (<a href="https://ellemouton.com/posts/revocation/">details</a>)</li>
+							<li class="fragment">Revocation key pair is crafted collaboratively between Alice and Bob</li>
+							<li class="fragment">Bob only accepts a new payment state, when Alice provides him with the data he needs to be able to construct the revocation key pair</li>
+							<li class="fragment">Bob knows the revocation key pairs, but only for old states</li>
+							<li class="fragment">Nobody knows the revocation key pair for the current state</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Penalty transaction</h3>
+						<p>When Alice publishes an old channel state, Bob has 144 blocks to claim <em>all the funds</em> in the channel</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Let's revisit the scheme</h3>
+						<img src="images/LNchannels.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Alice needs protection too!</h3>
+						<p>Bob stores channel states with the same scheme, <em>but mirrored</em></p>
+					</section>
+					<section data-transition="convex">
+						<h3>Commitment TXs per peer</h3>
+						<img src="images/mirrored.png">
+					</section>
+					<section data-transition="convex">
+						<h3>Recap</h3>
+						<ol>
+							<li>For the curent channel state X, both Alice and Bob have a transaction for which some part could be claimed with the revocation private key</li>
+							<li class="fragment">But nobody knows the entire revocation private key yet</li>
+							<li class="fragment">Alice and Bob only sign a new channel state, if they get the information they need to derive the revocation private key from their channel partner</li>
+							<li class="fragment">This kind of invalidates the old state</li>
+							<li class="fragment">If you publish an old state, you risk losing all your funds in that channel</li>
+						</ol>
+					</section>
+					<section data-transition="convex">
+						<h3>Channel reserves</h3>
+						<ul>
+							<li>For the penalty transaction incentive to work, skin in the game is required</li>
+							<li class="fragment">If all the balance within a channel belongs to Bob, he can't effectively punish Alice</li>
+							<li class="fragment">Bob could punish her and take all the money, but it's not a punishment because it already belongs to him</li>
+							<li class="fragment">That's why usually you cannot spend your full Lightning balance of a channel</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Output scripts</h3>
+						<p><span style="font-weight:bold">to_remote</span> output (<a href="https://github.com/lightning/bolts/blob/master/03-transactions.md#to_remote-output">Bolt 3</a>)</p>
+						<pre data-id="code-animation"><code class="hljs zsh" data-trim data-line-numbers>
+						&lt;remotepubkey&gt; OP_CHECKSIGVERIFY 1 OP_CHECKSEQUENCEVERIFY
+					</code></pre>
+					</section>
+					<section data-transition="convex">
+						<h3>Output scripts</h3>
+						<p><span style="font-weight:bold">to_local</span> output (<a href="https://github.com/lightning/bolts/blob/master/03-transactions.md#to_local-output">Bolt 3</a>)</p>
+						<pre data-id="code-animation"><code class="hljs zsh" data-trim data-line-numbers>
+						OP_IF
+							# Penalty transaction
+							&lt;revocationpubkey&gt;
+						OP_ELSE
+							`to_self_delay`
+							OP_CHECKSEQUENCEVERIFY
+							OP_DROP
+							&lt;local_delayedpubkey&gt;
+						OP_ENDIF
+						OP_CHECKSIG
+					</code></pre>
+					</section>
+					<section data-transition="convex">
+						<h3>Requirement to be online</h3>
+						<ul>
+							<li>Node has time of X blocks to release a penalty TX</li>
+							<li>Must watch the blockchain to see wether an old state has been published</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Any questions so far?</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Optional: Repurpose of nSequence field</h2>
+						<p>Optional</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Optional: Anchor channels problem</h2>
+						<p>Optional</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Optional: SegWit</h2>
+						<p>Optional</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Optional: Taproot</h2>
+						<p>Optional</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h2>Conclusion</h2>
+						<ul>
+							<li>Developing LN is an iterative process</li>
+							<li class="fragment">It's still evolving</li>
+							<li class="fragment">We're learning new things as we're building it</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Resources</h2>
+						<p>History</p>
+						<ul>
+							<li><a href="https://bitcoinmagazine.com/technical/history-lightning-brainstorm-beta">Bitcoin Magazine: LN history</a></li>
+							<li><a href="https://cryptowords.github.io/technical-a-brief-history-of-payment-channels">Alan Manuel K. Gloria: LN history</a></li>
+						</ul>
+						<p>Current implementation</p>
+						<ul>
+							<li><a href="https://github.com/lightning/bolts/blob/master/03-transactions.md">BOLT 3</a></li>
+							<li><a href="https://ellemouton.com/">Elle Mouton blog</a></li>
+						</ul>
 					</section>
 				</section>
 			</div>
