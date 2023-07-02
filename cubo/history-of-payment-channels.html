@@ -420,21 +420,64 @@
 						<h2>Questions?</h2>
 						<p>Any questions so far?</p>
 					</section>
+				</section>
+				<section>
 					<section data-transition="convex">
-						<h2>Optional: Repurpose of nSequence field</h2>
-						<p>Optional</p>
+						<h2>Optional topics in case we have time!</h2>
 					</section>
 					<section data-transition="convex">
-						<h2>Optional: Anchor channels problem</h2>
-						<p>Optional</p>
+						<h2>Repurpose of nSequence field</h2>
+						<ul>
+							<li><a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki">BIP 68</a> repurposes the nSequence field to be used for <em>relative</em> time locks</li>
+							<li class="fragment"><a href="https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki">BIP 125</a> repurposes the nSequence field to signal that a transaction can be replaced-by-fee</li>
+							<li class="fragment">...</li>
+						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Optional: SegWit</h2>
-						<p>Optional</p>
+						<h2>CLTV</h2>
+						<ul>
+							<li><a href="https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki">OP_CHECKLOCKTIMEVERIFY</a> enforces the spending TX of an output to set a minimum <span style="font-weight:bold">nLockTime</span></li>
+							<li class="fragment">It essentially adds an absolute timelock to an output</li>
+							<li class="fragment">Output cannot be spent before block 800.000</li>
+						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Optional: Taproot</h2>
-						<p>Optional</p>
+						<h2>CSV</h2>
+						<ul>
+							<li><a href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki">OP_CHECKSEQUENCEVERIFY</a> enforces the spending TX of an output to set a minimum <span style="font-weight:bold">nSequence</span></li>
+							<li class="fragment">It essentially adds a relative timelock to an output</li>
+							<li class="fragment">Output cannot be spent for 100 blocks after *this* TX has confirmed</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>SegWit</h2>
+						<ul>
+							<li>Before SegWit, a TX id could be manipulated by anybody even without holding a private key</li>
+							<li class="fragment">This is because a signature can be manipulated without changing its meaning</li>
+							<li class="fragment">SegWit TX ids are a hash of the TX <em>without the signature</em></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Importance for payment channels</h2>
+						<p>When we craft TXs that spend unconfirmed outputs (think Reclaim TXs), the spended output can suddenly seize to exist, because it's TX id (which is referenced as an input) changed.</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Anchor channels</h2>
+						<p>Problem: You need to estimate Transaction fees in advance, potentially for months!</p>
+						<p class="fragment">This is particularly bad because timelocks can expire while TX is waiting for confirmations</p>
+						<p  class="fragment">Solution: Anchor channels</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Anchor channels: Details</h2>
+						<ul>
+							<li>Don't try to estimate the TX fee in advance</li>
+							<li class="fragment">Instead use a low fee, and CPFP it upon a unilateral channel close</li>
+							<li class="fragment">Comes with its own challenges (<a href="https://bitcoinops.org/en/topics/cpfp-carve-out/">CPFP carve-out</a>, needs outputs to be able to CPFP)</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Taproot</h2>
+						<p>Channels based on taproot can use MuSig2 for the Multi-signature part and hide the script within the tweaked PubKey. (<a href="https://ellemouton.com/posts/taproot-chan-txs/">details</a>)</p>
 					</section>
 				</section>
 				<section>
