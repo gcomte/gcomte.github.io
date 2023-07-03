@@ -49,6 +49,63 @@
 					<section data-transition="convex">
 						<h2>History of Atomic Routing</h2>
 					</section>
+					<section data-transition="convex">
+						<h2>Non-chronological order</h2>
+						<p>Ordered by topics rather than time</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<section>Inflexible channel ownership</section>
+						<ul>
+							<li>To this day, payment channels are built between 2 parties</li>
+							<li class="fragment">Payments can only flow between Alice and Bob</li>
+							<li class="fragment">This cannot be changed, or it requires on-chain action</li>
+						</ul>
+					</section>
+					<section>
+						<section>Channel overdose</section>
+						<p>Do we need to open a payment channel with everyone we want to transact?</p>
+						<p><em>Very inefficient!</em></p>
+					</section>
+					<section>
+						<section>Channel overdose</section>
+						<p>Do we need to open a payment channel with everyone we want to transact?</p>
+						<p><em>Very inefficient!</em></p>
+					</section>
+					<section>
+						<a>Centralized hubs</a>
+						<ul>
+							<li><a href="https://bitcointalk.org/index.php?topic=91732.0">Meni Rosenfeld: Centralized hubs that forward payments</a></li>
+							<li class="fragment">Posted in Bitcointalk forum, July 2012</li>
+							<li class="fragment">Centralized payment processors forward payments</li>
+							<li class="fragment">Centralized solutions are always easier to build!</li>
+						</ul>
+					</section>
+					<section>
+						<h3>"Hub and Spoke" network model</h3>
+						<img src="images/wheel.jpg" />
+					</section>
+					<section>
+						<h3>Visualization</h3>
+						<img src="images/HubAndSpoke.png" />
+					</section>
+					<section>
+						<h3>Multi-Hub</h3>
+						<img src="images/HubAndSpoke.png" />
+					</section>
+					<section>
+						<h3>Security model</h3>
+						<p>The payment processors are businesses and have incentives to behave ethically</p>
+					</section>
+					<section>
+						<h3>Drawbacks</h3>
+						<ul>
+							<li class="fragment">Insecure (based on trust)</li>
+							<li class="fragment">Payment processor can invade privacy and censor payments</li>
+							<li class="fragment">Potentially unreliable (payment processor is down)</li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<section data-transition="convex">
@@ -137,7 +194,7 @@
 						<p>Return a secret when payment arrived;</p>
 						<blockquote>I will pay you as long as you know p such that <span style="font-weight: bold;">sha256(p) == h</span></blockquote>
 					</section>
-					<section data-transition="none">
+					<section data-transition="convex">
 						<h2>Payment proof</h2>
 						<img src="images/RippleTrustNetworkHashLock.png" />
 						<ul>
@@ -145,9 +202,40 @@
 							<li class="fragment">How can disputes be resolved?</li>
 						</ul>
 					</section>
-					<section data-transition="none">
+					<section data-transition="convex">
+						<h2>Conclusion</h2>
+						<ul>
+							<li>Concept of routing through the network looks promising</li>
+							<li class="fragment">But the Bitcoin way please</li>
+							<ul>
+								<li class="fragment">Not based on credit but fully backed with money</li>
+								<li class="fragment">Trustless</li>
+							</ul>
+						</ul>
+					</section>
+					<section data-transition="convex">
 						<h2>Project Ripple</h2>
 						<img src="images/RippleTrustNetworkHashLock.png" />
+					</section>
+					<section data-transition="convex">
+						<h2>Lessons learned</h2>
+						<ul>
+							<li>We need some form of a court to resolve disputes</li>
+							<li class="fragment">It needs to define:</li>
+							<ul>
+								<li class="fragment">Time frame available for forwarding</li>
+								<li class="fragment">Was payment forwarded or not</li>
+								<li class="fragment">How to resolve disputes?</li>
+							</ul>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Spoiler Alert!</h2>
+						<ul>
+							<li class="fragment">The Bitcoin consensus itself could be that court!</li>
+							<li class="fragment">It defines time through its block time</li>
+							<li class="fragment">We can use scripts to ensure a transaction is routed through atomically</li>
+						</ul>
 					</section>
 				</section>
 			</div>
