@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -47,34 +47,29 @@
 			<div class="slides">
 				<section>
 					<section data-transition="convex">
-						<h2>History of Atomic Routing</h2>
+						<h3>History of Atomic Routing</h3>
 					</section>
 					<section data-transition="convex">
-						<h2>Non-chronological order</h2>
+						<h3>Non-chronological order</h3>
 						<p>Ordered by topics rather than time</p>
 					</section>
 				</section>
 				<section>
 					<section>
-						<section>Inflexible channel ownership</section>
+						<h3>Inflexible channel ownership</h3>
 						<ul>
 							<li>To this day, payment channels are built between 2 parties</li>
-							<li class="fragment">Payments can only flow between Alice and Bob</li>
+							<li class="fragment">Transactions are possible between Alice and Bob, Charlie is left out</li>
 							<li class="fragment">This cannot be changed, or it requires on-chain action</li>
 						</ul>
 					</section>
 					<section>
-						<section>Channel overdose</section>
-						<p>Do we need to open a payment channel with everyone we want to transact?</p>
-						<p><em>Very inefficient!</em></p>
+						<h3>Channel overdose</h3>
+						<p>Do we need to open a payment channel with everyone we want to transact with?</p>
+						<p class="fragment"><em>That's very inefficient!</em></p>
 					</section>
 					<section>
-						<section>Channel overdose</section>
-						<p>Do we need to open a payment channel with everyone we want to transact?</p>
-						<p><em>Very inefficient!</em></p>
-					</section>
-					<section>
-						<a>Centralized hubs</a>
+						<h3>Centralized hubs</h3>
 						<ul>
 							<li><a href="https://bitcointalk.org/index.php?topic=91732.0">Meni Rosenfeld: Centralized hubs that forward payments</a></li>
 							<li class="fragment">Posted in Bitcointalk forum, July 2012</li>
@@ -84,7 +79,7 @@
 					</section>
 					<section>
 						<h3>"Hub and Spoke" network model</h3>
-						<img src="images/wheel.jpg" />
+						<img src="images/wheel.jpg" width="60%" />
 					</section>
 					<section>
 						<h3>Visualization</h3>
@@ -92,7 +87,7 @@
 					</section>
 					<section>
 						<h3>Multi-Hub</h3>
-						<img src="images/HubAndSpoke.png" />
+						<img src="images/MultiHub.png" />
 					</section>
 					<section>
 						<h3>Security model</h3>
@@ -109,7 +104,7 @@
 				</section>
 				<section>
 					<section data-transition="convex">
-						<h2>Ryan Fugger: Ripple</h2>
+						<h3>Ryan Fugger: Ripple</h3>
 						<ul>
 							<li><a href="https://web.archive.org/web/20170314104526/http://archive.ripple-project.org/decentralizedcurrency.pdf">Paper</a> released in 2004 (<a href="https://web.archive.org/web/20170405004934/http://archive.ripple-project.org/Main/Papers">more papers</a>)</li>
 							<li class="fragment"><em>Not</em> the cryptocurrency</li>
@@ -117,7 +112,7 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Ripple idea</h2>
+						<h3>Ripple idea</h3>
 						<ul>
 							<li>Use already existing trust-relationships to transfer debt</li>
 							<li class="fragment">You would lend your mother up to $2.000 and trust she could pay it back some day</li>
@@ -127,12 +122,12 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Ripple idea</h2>
+						<h3>Ripple idea</h3>
 						<p>This results in a network of trust relations</p>
 						<img src="images/RippleTrustNetwork.png" />
 					</section>
 					<section data-transition="convex">
-						<h2>Scenario</h2>
+						<h3>Scenario</h3>
 						<p>Your boss wants to buy something from John for $50 (on credit)</p>
 						<ul>
 							<li>He owes you $50</li>
@@ -141,11 +136,11 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Trust situation after 'payment'</h2>
+						<h3>Trust situation after 'payment'</h3>
 						<img src="images/RippleTrustNetworkWithPayment.png" />
 					</section>
 					<section data-transition="convex">
-						<h2>New situation</h2>
+						<h3>New situation</h3>
 						<p>John could now send $200 into the opposite direction</p>
 						<ul>
 							<li class="fragment">He trusts your mother a debt of $150</li>
@@ -153,15 +148,15 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>System was used ...</h2>
-						<p>... on a centralized platform. (Ripplepay website)</p>
+						<h3>System was used ...</h3>
+						<p class="fragment">... on a centralized platform. (Ripplepay website)</p>
 						<ul>
 							<li class="fragment">Platform could become malicious</li>
 							<li class="fragment">The whole point was to not have to trust unknown entities</li>
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Building it in a decentralized way ...</h2>
+						<h3>Building it in a decentralized way ...</h3>
 						<ul>
 							<li class="fragment">Routing turns out to be a major problem</li>
 							<li class="fragment">No known solution to make transaction atomic</li>
@@ -169,7 +164,7 @@
 						</ul>
 					</section>
 					<section data-transition="none">
-						<h2>Someone does not pay</h2>
+						<h3>Someone does not pay</h3>
 						<img src="images/RippleTrustNetworkPaymentProblem.png" />
 						<ul>
 							<li class="fragment">Someone does not pay willingly</li>
@@ -177,7 +172,7 @@
 						</ul>
 					</section>
 					<section data-transition="none">
-						<h2>Someone does not pay</h2>
+						<h3>Someone does not pay</h3>
 						<ul>
 							<li class="fragment">Is the payment just stuck or will it not go through?</li>
 							<li class="fragment">Where exactly is the routing failing?</li>
@@ -185,17 +180,12 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Proof that payment went through</h2>
+						<h3>Proof that payment went through</h3>
 						<p>Return a secret when payment arrived;</p>
 						<blockquote>I will pay you as long as you know p such that <span style="font-weight: bold;">sha256(p) == h</span></blockquote>
 					</section>
 					<section data-transition="convex">
-						<h2>Proof that payment went through</h2>
-						<p>Return a secret when payment arrived;</p>
-						<blockquote>I will pay you as long as you know p such that <span style="font-weight: bold;">sha256(p) == h</span></blockquote>
-					</section>
-					<section data-transition="convex">
-						<h2>Payment proof</h2>
+						<h3>Payment proof</h3>
 						<img src="images/RippleTrustNetworkHashLock.png" />
 						<ul>
 							<li class="fragment">Atomicity is still a problem</li>
@@ -203,22 +193,22 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Conclusion</h2>
+						<h3>Conclusion</h3>
 						<ul>
 							<li>Concept of routing through the network looks promising</li>
 							<li class="fragment">But the Bitcoin way please</li>
 							<ul>
-								<li class="fragment">Not based on credit but fully backed with money</li>
+								<li class="fragment">Not based on credit but fully backed</li>
 								<li class="fragment">Trustless</li>
 							</ul>
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Project Ripple</h2>
-						<img src="images/RippleTrustNetworkHashLock.png" />
+						<h3>Project Ripple</h3>
+						<img src="images/failure.jpg" width="60%" />
 					</section>
 					<section data-transition="convex">
-						<h2>Lessons learned</h2>
+						<h3>Lessons learned</h3>
 						<ul>
 							<li>We need some form of a court to resolve disputes</li>
 							<li class="fragment">It needs to define:</li>
@@ -230,12 +220,43 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h2>Spoiler Alert!</h2>
+						<h3>Spoiler Alert!</h3>
 						<ul>
 							<li class="fragment">The Bitcoin consensus itself could be that court!</li>
 							<li class="fragment">It defines time through its block time</li>
 							<li class="fragment">We can use scripts to ensure a transaction is routed through atomically</li>
 						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>HTLC</h3>
+						<ul>
+							<li><span style="font-weight: bold;">H</span>ashed <span style="font-weight: bold;">T</span>ime<span style="font-weight: bold;">L</span>ock <span style="font-weight: bold;">C</span>ontract</li>
+							<li class="fragment">Proposed by Poon and Dryja in the <a href="https://lightning.network/lightning-network-paper.pdf">Lightning Network paper</a></li>
+							<li class="fragment">Uses time locks</li>
+							<li class="fragment">Uses hash locks</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Time lock</h3>
+						<p>Funds can only be spent after a given time or block number</p>
+					</section>
+					<section>
+						<h3>Hash lock</h3>
+						<p>Funds can only be spent if you know the secret <span style="font-weight: bold;">s</span>, such that:</p>
+						<p><span style="font-weight: bold;">hash(s) == x</span></p>
+						<p class="fragment"><span style="font-weight: bold;">x</span> is written to the unlocking script, <span style="font-weight: bold;">s</span> needs to be provided by the spender such that <span style="font-weight: bold;">x</span> can be reproduced</p>
+					</section>
+					<section>
+						<h3>Combine restrictions</h3>
+						<p><span style="color: red;">signature</span>+ <span style="color: blue;">hash lock</span> + <span style="color: green;">time lock</span></p>
+						<p class="fragment">Funds can be spent by <span style="color: red;">you</span>, <span style="color: blue;">at block 800,000 (or later)</span>, <span style="color: green;"> if you know a secret</span></p>
+					</section>
+					<section>
+						<h3>Scenario</h3>
+						<img src="images/HTLCchannelSetup.png" width="40%"/>
+						<p>Alice wants to pay Eric</p>
 					</section>
 				</section>
 			</div>
