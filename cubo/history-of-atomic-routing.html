@@ -53,9 +53,14 @@
 						<h3>Non-chronological order</h3>
 						<p>Ordered by topics rather than time</p>
 					</section>
+					<section data-transition="convex">
+						<h3>Simplified contracts</h3>
+						<p>Some details are sacrificed to remove complexity</p>
+						<p class="fragment">The goal is to understand the <em>core concepts</em></p>
+					</section>
 				</section>
 				<section>
-					<section>
+					<section data-transition="convex">
 						<h3>Inflexible channel ownership</h3>
 						<ul>
 							<li>To this day, payment channels are built between 2 parties</li>
@@ -63,12 +68,12 @@
 							<li class="fragment">This cannot be changed, or it requires on-chain action</li>
 						</ul>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Channel overdose</h3>
 						<p>Do we need to open a payment channel with everyone we want to transact with?</p>
 						<p class="fragment"><em>That's very inefficient!</em></p>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Centralized hubs</h3>
 						<ul>
 							<li><a href="https://bitcointalk.org/index.php?topic=91732.0">Meni Rosenfeld: Centralized hubs that forward payments</a></li>
@@ -77,26 +82,27 @@
 							<li class="fragment">Centralized solutions are always easier to build!</li>
 						</ul>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>"Hub and Spoke" network model</h3>
 						<img src="images/wheel.jpg" width="60%" />
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Visualization</h3>
 						<img src="images/HubAndSpoke.png" />
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Multi-Hub</h3>
 						<img src="images/MultiHub.png" />
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Security model</h3>
 						<p>The payment processors are businesses and have incentives to behave ethically</p>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Drawbacks</h3>
 						<ul>
 							<li class="fragment">Insecure (based on trust)</li>
+							<li class="fragment">High barrier to entry</li>
 							<li class="fragment">Payment processor can invade privacy and censor payments</li>
 							<li class="fragment">Potentially unreliable (payment processor is down)</li>
 						</ul>
@@ -130,7 +136,7 @@
 						<h3>Scenario</h3>
 						<p>Your boss wants to buy something from John for $50 (on credit)</p>
 						<ul>
-							<li>He owes you $50</li>
+							<li class="fragment">He owes you $50</li>
 							<li class="fragment">You owe your mother $50</li>
 							<li class="fragment">Your mother owes $50 to John</li>
 						</ul>
@@ -193,17 +199,6 @@
 						</ul>
 					</section>
 					<section data-transition="convex">
-						<h3>Conclusion</h3>
-						<ul>
-							<li>Concept of routing through the network looks promising</li>
-							<li class="fragment">But the Bitcoin way please</li>
-							<ul>
-								<li class="fragment">Not based on credit but fully backed</li>
-								<li class="fragment">Trustless</li>
-							</ul>
-						</ul>
-					</section>
-					<section data-transition="convex">
 						<h3>Project Ripple</h3>
 						<img src="images/failure.jpg" width="60%" />
 					</section>
@@ -227,9 +222,20 @@
 							<li class="fragment">We can use scripts to ensure a transaction is routed through atomically</li>
 						</ul>
 					</section>
+					<section data-transition="convex">
+						<h3>Conclusion</h3>
+						<ul>
+							<li>Concept of routing through the network looks promising</li>
+							<li class="fragment">But the Bitcoin way please</li>
+							<ul>
+								<li class="fragment">Not based on credit but fully backed</li>
+								<li class="fragment">Trustless</li>
+							</ul>
+						</ul>
+					</section>
 				</section>
 				<section>
-					<section>
+					<section data-transition="convex">
 						<h3>HTLC</h3>
 						<ul>
 							<li><span style="font-weight: bold;">H</span>ashed <span style="font-weight: bold;">T</span>ime<span style="font-weight: bold;">L</span>ock <span style="font-weight: bold;">C</span>ontract</li>
@@ -238,30 +244,304 @@
 							<li class="fragment">Uses hash locks</li>
 						</ul>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Time lock</h3>
 						<p>Funds can only be spent after a given time or block number</p>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Hash lock</h3>
 						<p>Funds can only be spent if you know the secret <span style="font-weight: bold;">s</span>, such that:</p>
 						<p><span style="font-weight: bold;">hash(s) == x</span></p>
 						<p class="fragment"><span style="font-weight: bold;">x</span> is written to the unlocking script, <span style="font-weight: bold;">s</span> needs to be provided by the spender such that <span style="font-weight: bold;">x</span> can be reproduced</p>
 					</section>
-					<section>
+					<section data-transition="convex">
 						<h3>Combine restrictions</h3>
-						<p><span style="color: red;">signature</span>+ <span style="color: blue;">hash lock</span> + <span style="color: green;">time lock</span></p>
+						<p><span style="color: red;">signature</span> + <span style="color: blue;">hash lock</span> + <span style="color: green;">time lock</span></p>
+						<br />
 						<p class="fragment">Funds can be spent by <span style="color: red;">you</span>, <span style="color: blue;">at block 800,000 (or later)</span>, <span style="color: green;"> if you know a secret</span></p>
 					</section>
-					<section>
+					<section data-transition="convex">
+						<h3>simplified HTLC</h3>
+						<p><span style="color: red;">signature</span>, <span style="color: blue;">hash lock</span>, <span style="color: green;">time lock</span></p>
+						<br />
+						<p>Funds can be spent by <span style="color: red;">Alice</span> <span style="color: blue;">at block 800,000 (or later)</span></p>
+						<span style="font-weight: bold;">OR</span>
+						<p>by <span style="color: red;">Bob</span> <span style="color: green;"> if he knows a secret</span></p>
+					</section>
+					<section data-transition="convex">
 						<h3>Scenario</h3>
 						<img src="images/HTLCchannelSetup.png" width="40%"/>
-						<p>Alice wants to pay Eric</p>
+						<p>Alice wants to send Eric 1 BTC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="40%"/>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>1) Eric creates a secret <span style="font-weight: bold;">R</span> and communicates its hash to Alice</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>2) Alice creates a commitment TX: <em>I will pay Bob 1.003 BTC if he presents the secret (R) that leads to hash H, during the next 10 blocks</em></p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Bob now also knows H, so he can craft a similar TX</em></p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>3) Bob creates a commitment TX: <em>I will pay Carol 1.002 BTC if she presents the secret (R) that leads to hash H, during the next 9 blocks</em></p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Remember, the commitment TX spends the 2-of-2 multiSig (funding TX) and is <em>not</em> being published to the Bitcoin network!</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>4) Carol now also knows H, she crafts a similar TX for Diana</p>
+						<p>5) Same story for Diana</p>
+					</section>
+					<section data-transition="none">
+						<h3>Notice</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Diminishing BTC amount --> a fee for the routing is being paid</p>
+					</section>
+					<section data-transition="none">
+						<h3>Notice</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Diminishing time lock --> Security measure to ensure atomicity of the transaction</p>
+					</section>
+					<section data-transition="none">
+						<h3>Notice</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Eric is the only one who knows actually knows R! Diana constructed an HTLC in which she promised 1 BTC to Eric if he reveals R!</p>
+					</section>
+					<section data-transition="none">
+						<h3>Notice</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Eric is happy! But what about Diana? Will she ever receive her "refund" from Carol?</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Eric publishes the HTLC on-chain (closes the channel)</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Now he has 7 blocks to spend the commitment TX, or else Diana can take the money back.</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>He spends that commitment TX and sends it to himself to ensure the money belongs to him forever. This means, he needs to reveal R on-chain!</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Bob, Carol and Diana are watching the blockchain and learn R from there! They can now also claim their funds.</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Happy end!</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Well, not really.</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Even though the payment went through, channels have also been closed, which is unfortunate.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>So let's go back to the moment Diana sent Eric her HTLC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>As we have just witnessed, Eric <em>could</em> claim his funds now, and Diana knows that as well.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>So Eric asks Diana to move to a new channel state, where Eric owns +1 BTC, and Diana -1 BTC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Diana tells Eric that she is only willing to do that if he tells her R</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>HTLC consolidation</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>They collaboratively move to a new channel state and remove the HTLC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Diana has given 1 BTC to Bob. She is now in the same situation as Bob before.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>The scheme repeats through 7, 8, 9 until the transaction went through.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>What if step 1 does not happen?</p>
+						<p class="fragment">Payment cannot be constructed.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>What if step 2 does not happen?</p>
+						<p class="fragment">Alice searches for a new payment route</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>What if one of steps 2, 3, 4, 5, 6 does not happen?</p>
+						<p class="fragment">Funds are locked in HTLC until time lock runs out</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>What if one of steps 7, 8, 9 does not happen?</p>
+						<p class="fragment">Bob, Carol or Diana may lose 1 BTC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>They are protected by the time-lock to have enough time to react. But if they leave the system, they can only harm themselves, not anyone else.</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Conclusion</h3>
+						<p>The transaction is atomic! (as long as you run your system responsibly)</p>
+						<p class="fragment">Bitcoin fixed the ripple-problem :-)</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Any questions so far?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Practical consequences</h3>
+						<p>The more hops involved, the more ...</p>
+						<ul>
+							<li class="fragment">... latency</li>
+							<li class="fragment">... fees</li>
+							<li class="fragment">... unreliabiltiy</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Hash lock script</h3>
+						<p>Extract from HTLC output script in  (<a href="https://github.com/lightning/bolts/blob/master/03-transactions.md#offered-htlc-outputs">Bolt 3</a>)</p>
+						<pre data-id="code-animation"><code class="hljs zsh" data-trim data-line-numbers>
+# To remote node with preimage.
+OP_HASH160 &lt;RIPEMD160(payment_hash)&gt; OP_EQUALVERIFY
+OP_CHECKSIG
+						</code></pre>
+					</section>
+					<section data-transition="convex">
+						<h3>Time lock script</h3>
+						<p>Extract from HTLC output script in (<a href="https://github.com/lightning/bolts/blob/master/03-transactions.md#received-htlc-outputs">Bolt 3</a>)</p>
+						<pre data-id="code-animation"><code class="hljs zsh" data-trim data-line-numbers>
+# To remote node after timeout.
+OP_DROP &lt;cltv_expiry&gt; OP_CHECKLOCKTIMEVERIFY OP_DROP
+OP_CHECKSIG
+						</code></pre>
+						<section data-transition="convex">
+							<h2>Questions?</h2>
+							<p>Any questions regarding HTLCs?</p>
+						</section>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Network topography</h3>
+						<img src="images/CentralizedDecentralizedDistributed.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Open many channels</h3>
+						<p>The better you're connected, the fewer hops you're gonna have</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Announced channels</h3>
+						<ul>
+							<li>You can choose whether you want to announce your channel to the channel graph</li>
+							<li class="fragment">If you do, your node may also forward payments</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Liquidity constraints</h3>
+						<ul>
+							<li>Liquidity is required on the entire payment path (remember Ripple)</li>
+							<li class="fragment">Actual distribution of channel funds is not public</li>
+							<li class="fragment">Polar</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Multi-path payments</h3>
+						<img src="images/SourceRouting.png" width="60%" />
+					</section>
+					<section data-transition="convex">
+						<h3>Source-routing</h3>
+						<img src="images/SourceRouting.png" width="60%" />
+					</section>
+					<section data-transition="convex">
+						<h3>Source-routing</h3>
+						<ul>
+							<li>Source routing means freedom & responsiblity</li>
+							<li class="fragment">Pathfinding can be tricky</li>
+						</ul>
+					</section>
+					<section data-transition="none">
+						<h3>Onion routing</h3>
+						<img src="images/onionRouting.png" width="65%" />
+					</section>
+					<section data-transition="none">
+						<h3>Onion routing</h3>
+						<ul>
+							<li>Each node only knows the previous and the next hop</li>
+							<li class="fragment">Nothing more</li>
+							<li class="fragment">Source & Destination unknown</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h2>Resources</h2>
+						<p>History</p>
+						<ul>
+							<li><a href="https://fiatjaf.com/rumple.html">Ripple review from an LN perspective</a></li>
+						</ul>
+						<p>Current implementation</p>
+						<ul>
+							<li><a href="https://medium.com/softblocks/lightning-network-in-depth-part-2-htlc-and-payment-routing-db46aea445a8">HTLCs explained</a></li>
+							<li><a href="https://ellemouton.com/">Elle Mouton blog</a></li>
+							<li><a href="https://www.lopp.net/lightning-information.html">Jason Lopp resources list</a></li>
+						</ul>
 					</section>
 				</section>
 			</div>
 		</div>
-
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
