@@ -45,9 +45,482 @@
 		</header>
 		<div class="reveal">
 			<div class="slides">
+				<section>
+					<section data-transition="convex">
+						<h3>LN: Future Evolutions</h3>
+						<p>Gabriel Comte</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Bitcoin is a living system!</h3>
+						<img src="images/honeybadger.jpg" width="60%" />
+					</section>
+					<section data-transition="convex">
+						<h3>Bitcoin is a living system!</h3>
+						<ul>
+							<li>Bitcoin is changing</li>
+							<li class="fragment">It is involving</li>
+							<li class="fragment">It is a work in progress</li>
+							<li class="fragment">Lightning even more so</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Dual-funded channels</h3>
+						<p>What are they?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Dual-funded channels</h3>
+						<ul>
+							<li>Both channel parties contribute funds</li>
+							<li class="fragment">Send and receive funds immediately</li>
+							<li class="fragment"><a href="https://blockstream.info/tx/91538cbc4aca767cb77aa0690c2a6e710e095c8eb6d8f73d53a3a29682cb7581">First dual-funded channel</a> by Blockstream engineers</li>
+							<li class="fragment">Version 2 channel establishment protocol</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Requires</h3>
+						<ul>
+							<li>Finding willing and liquid channel partner</li>
+							<li class="fragment">Channel opening markets</li>
+							<li class="fragment">Leaking UTXO privacy</li>
+							<li class="fragment">Protocol for agreeing on amounts</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Status</h3>
+						<ul>
+							<li>Draft: <a href="https://github.com/lightning/bolts/pull/851"/>Specification</a></li>
+							<li class="fragment">Some implementation ready</li>
+							<li class="fragment"><a href="https://blockstream.info/tx/91538cbc4aca767cb77aa0690c2a6e710e095c8eb6d8f73d53a3a29682cb7581">First dual-funded channel</a> by Blockstream engineers</li>
+							<li class="fragment">Draft: <a href="https://github.com/lightning/bolts/pull/851"/>Liquidity ads</a></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Questions about dual-funding?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Splicing</h3>
+						<p>Any ideas?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Splicing</h3>
+						<p>Current situation</p>
+						<img src="images/BeforeSplicing.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Skipping intermediate TX</h3>
+						<img src="images/SplicingIntermediate.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Updating channel</h3>
+						<img src="images/SplicingUseless.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Decrease channel size!</h3>
+						<img src="images/SplicingOut.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Increase channel size!</h3>
+						<img src="images/SplicingIn.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>On-chain <> LN interoperability</h3>
+						<img src="images/SplicingIn3rdParty.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>On-chain <> LN interoperability</h3>
+						<img src="images/SplicingOut3rdParty.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Status</h3>
+						<ul>
+							<li>Draft: <a href="https://github.com/lightning/bolts/pull/863"/>Specification</a></li>
+							<li class="fragment">Some implementations ready</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Questions splicing?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="none">
+						<h3>Eltoo</h3>
+						<p>Ever heard of it?</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eltoo</h3>
+						<ul>
+							<li>New update mechanism</li>
+						</ul>
+						<br />
+						<img src="images/UpdateMechanism.png" />
+					</section>
+					<section data-transition="none">
+						<h3>Eltoo</h3>
+						<ul>
+							<li>New update mechanism</li>
+							<li class="fragment">Replacement for the penalty TX</li>
+							<li class="fragment"><em>"Satoshi's nSequence scheme done right"</em></li>
+							<li class="fragment"><a href="https://blockstream.com/eltoo.pdf">Paper</a> by Decker, Russell, Osuntokun</li>
+							<li class="fragment">Name: Derived from english 'L2' (Layer 2)</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Setup</h3>
+						<img src="images/eltooSetup.png" />
+					</section>
+					<section data-transition="none">
+						<h3>Channel state 1</h3>
+						<img src="images/eltooState1.png" />
+					</section>
+					<section data-transition="none">
+						<h3>Channel state 1</h3>
+						<img src="images/eltooState1LockTime.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Channel state 2</h3>
+						<img src="images/eltooState2.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Close channel</h3>
+						<img src="images/eltooTooManyBroadcastings.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Close channel</h3>
+						<img src="images/eltooHonestCase.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Allowed ordering</h3>
+						<img src="images/eltooAllowedOrdering.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Prevented orderingl</h3>
+						<img src="images/eltooPreventedOrdering.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Malicious attempt</h3>
+						<img src="images/eltooCheat.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Attack prevention</h3>
+						<img src="images/eltooCheatResolve.png" />
+					</section>
+					<section>
+						<h3>Eltoo advantages</h3>
+						<ul>
+							<li>Removed security issue: Publish old state</li>
+							<li class="fragment">Symmetric channel states</li>
+							<li class="fragment">Only last channel state required</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>SIGHASH_ANYPREVOUT</h3>
+						<p>Draft: <a href="https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki">BIP 118</a></p>
+						<p>Previously <span font-weight="bold">SIGHASH_NO_INPUT</span></p>
+						<p><a href="https://anyprevout.xyz/">Info page</a></p><p class="fragment">Requires a soft fork</p>
+						<p class="fragment">... community is not in consensus about it</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Questions about eltoo?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>BOLT 12</h3>
+						<p>Who has heard about Lightning offers?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>BOLT 11 limitations</h3>
+						<ul>
+							<li>Inflexible payment flow</li>
+							<ul>
+								<li class="fragment">Receiver initiated</li>
+								<li class="fragment">Receiver defines amount</li>
+								<li class="fragment">Receiver needs to craft invoice manually</li>
+							</ul>
+							<li class="fragment">Invoices are not reusable</li>
+							<li class="fragment"><a href="https://github.com/rustyrussell/lightning-rfc/blob/guilt/offers/12-offer-encoding.md#limitations-of-bolt-11">more</a></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>LNURL solves issues</h3>
+						<ul>
+							<li>LNURL-pay</li>
+							<li class="fragment">LNURL-withdraw</li>
+							<li class="fragment">Over HTTP</li>
+							<li class="fragment">Requires web server</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>BOLT 12</h3>
+						<ul>
+							<li>Over LN itself</li>
+							<li class="fragment">Publish an <em>offer</em></li>
+							<li class="fragment">Publish an <em>invoice_request</em></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Questions about BOLT 12?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Recap: History of Atomic Routing</h3>
+						<p><a href="https://gcomte.github.io/cubo/history-of-atomic-routing.html#/4/5">Routing privacy</a></p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Blinded Paths</h3>
+						<p>What could that be?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Blinded Paths</h3>
+						<ul>
+							<li>Successor of <em>'rendez-vous routing'</em></li>
+							<li class="fragment">Protect receiver privacy</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>'Regular' payments</h3>
+						<img src="images/non-blinded-routing.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Blinded-paths</h3>
+						<img src="images/blinded-routing.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Blinded-paths</h3>
+						<img src="images/BlindedPath-dummyHops.png" />
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Questions about blinded paths?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Taproot & MuSig (Schnorr)</h3>
+						<ul>
+							<li>Cryptographic tricks</li>
+							<li class="fragment">Omit some data from TX's</li>
+							<li class="fragment">Smaller on-chain TXs</li>
+							<li class="fragment">Better privacy</li>
+							<li class="fragment">LN Tx may look like regular TX</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>LN TX</h3>
+						<ul>
+							<li class="fragment">Multiple signatures</li>
+							<li class="fragment">Hash lock</li>
+							<li class="fragment">Time lock</li>
+							<li class="fragment">HTLC</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Regular TX</h3>
+						Transaction was signed by Key X
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>PTLC Routing</h3>
+						<p>Ever heard of PTLCs?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>PTLC Routing</h3>
+						<ul>
+							<li>Successor to HTLCs</li>
+							<li class="fragment"><span style="font-weight: bold;">P</span>oint <span style="font-weight: bold;">T</span>ime<span style="font-weight: bold;">L</span>ocked <span style="font-weight: bold;">C</span>ontract</li>
+							<li class="fragment">Uses adaptor signatures</li>
+							<li class="fragment">Based on Schnorr signatures</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>PTLC Routing</h3>
+						<ul>
+							<li>Use a point (PubKey) rather than hash lock</li>
+							<li class="fragment">Point can be aggregated with other key point</li>
+							<li class="fragment">Unilateral close path becomes smaller</li>
+							<li class="fragment">No shared secret amongst all hops</li>
+							<li class="fragment">No payment correlation between hops</li>
+							<li class="fragment">Preimage as proof of payment</li>
+							<li class="fragment"><a href="https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-June/002029.html">Stuckless payments</a></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Questions about PTLCs?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Channel Factories</h3>
+						<p>¿Quién sabe?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Channel Factories</h3>
+						<p>Payment channels that can spawn other payment channels</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Hypothetical multiparty channel</h3>
+						<ul>
+							<li>4-of-4 mulitsig</li>
+							<li>Alice, Bob, Carol, Dave</li>
+							<li class="fragment">Everybody can transact with everybody!</li>
+							<li class="fragment">New channel states require signature from everyone</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Spawn 2-of-2 channels</h3>
+						<ul>
+							<li>Use 4-of-4 not directly as payment channels</li>
+							<li class="fragment">Craft 2-of-2 outputs</li>
+							<li class="fragment">Don't broadcast</li>
+							<li class="fragment">Use 2-of-2 as regular channels</li>
+							<li class="fragment">2-of-2 "channel close" is just moving 4-of-4 to a new state (off-chain)</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Visualization</h3>
+						<img src="images/channelFactoriesState1.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Change channel situation</h3>
+						<img src="images/channelFactoriesState2.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Advantages</h3>
+						<ul>
+							<li>Quick and seamless channel openings</li>
+							<li class="fragment">Quick and seamless channel changes</li>
+							<li class="fragment">Saving on-chain fees</li>
+							<li class="fragment">More flexible capital allocation</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Drawbacks</h3>
+						<ul>
+							<li>Dependence of many factory partners</li>
+							<li class="fragment">If 1 party vanishes / misbehaves, factory close</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Questions about channel factories?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Watchtowers</h3>
+						<p>¿Qué son?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Watchtowers</h3>
+						<p>Inofficial <a href="https://github.com/sr-gi/bolt13/blob/master/13-watchtowers.md">BOLT 13</a></p>
+						<blockquote>All off-chain protocols assume the user remains online and synchronised with the network. To alleviate this assumption, customers can hire a third party watching service ...</blockquote>
+					</section>
+					<section data-transition="convex">
+						<h3>The problem</h3>
+						<ul>
+							<li class="fragment">Your channel partner could try to publish an old channel state (old commitment TX) while you're offline</li>
+							<li class="fragment">You might miss opportunity to release the penalty TX</li>
+							<li class="fragment">Result:</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<img src="images/gotScammed.jpg" />
+					</section>
+					<section data-transition="convex">
+						<h3>Watchtower</h3>
+						<ul>
+							<li>A 3rd party watching the chain for you</li>
+							<li class="fragment">On every new channel state, provide Watchtower with Penalty TX</li>
+							<li class="fragment">Watchtower watches Blockchain, releases Penalty TX when required</li>
+							<img class="fragment" src="images/WatchtowerNaive.png" />
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Watchtowers improve situation for everyone</h3>
+						<ul>
+							<li>Attacker intimidation: You <em>could</em> be using a watchtower!</li>
+							<li class="fragment">Paradox: Since there are watchtowers, watchtowers are almost never used</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Drawbacks?</h3>
+						<p>Do you see any issues with that scheme?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Encryption 🌈</h3>
+						<img src="images/WatchtowerEncrypted.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Yes but ...</h3>
+						<p>... do you see any issues with that scheme?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Solution</h3>
+						<ul>
+							<li>Commitment TX id: <span style="font-weight: bold">32 bytes</span></li>
+							<li class="fragment"><span style="font-size: 26px">bd671a6c09bef99431a07e314c19d0be6bea3594e4995e7c5be8acb1c7a7e97d</span></li>
+							<li class="fragment">Locator: <span style="font-weight: bold">First 16 bytes</span></li>
+							<li class="fragment">Encryption key: <span style="font-weight: bold">SHA256(commitmentTxId)</span></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Conclusion</h3>
+						<ul>
+							<li>Watchtower only learns full TX id when old state is published!</li>
+							<li class="fragment">Required to derive password and decrypt channel state</li>
+							<li class="fragment">Privacy is only leaked when Watchtower action is required</li>
+							<li class="fragment">Remember the intimidation effect!</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Current state</h3>
+						<p>Standard isn't perfectly followed</p>
+						<p class="fragment">Standard is a bit outdated</p>
+						<p class="fragment">Watchtowers exist</p>
+						<p class="fragment">Degree of usage unknown</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Questions about watchtowers?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>LSP standard</h3>
+						<ul>
+							<li>Might already be covered by "Practical Challenges in LN Adotpion"</li>
+							<li class="fragment">Lightning Service provider</li>
+							<li class="fragment"><a href="https://github.com/BitcoinAndLightningLayerSpecs/lsp">Standard specification</a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Anchor channels</h3>
+						<p>Skipped in talk <a href="https://gcomte.github.io/cubo/history-of-payment-channels.html#/7/6">'History of Paymnet Channels'</a></p>
+					</section>
+				</section>
 				<section data-transition="convex">
-					<h2>LN: Future Evolutions</h2>
-					<p>Lorem ipsum</p>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="https://bitcoinops.org/">Bitcoin Optech</a></li>
+						<li><a href="https://lists.linuxfoundation.org/mailman/listinfo/lightning-dev">Lightning-dev mailing list</a></li>
+						<li><a href="https://www.lopp.net/lightning-information.html">Jason Lopp resources list</a></li>
+						<li><a href="https://ellemouton.com/">Elle Mouton blog</a></li>
+					</ul>
 				</section>
 			</div>
 		</div>
