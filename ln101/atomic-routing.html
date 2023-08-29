@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-transition="convex">
+						<h3>Remember Routing</h3>
+						<p><a href="routing.html">LN101 about routing</a></p>
+					</section>
+					<section data-transition="convex">
+						<h3>Atomicity</h3>
+						<p>What is atomicity in IT?</p>
+						<p class="fragment">An all-or-nothing operation</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Payment routing</h3>
+						<p>Why is this relevant for payment routing?</p>
+						<div  class="fragment" style="margin-top: 20px">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40%" height="40%"
+								 viewBox="0 0 396.9 354.3" style="enable-background:new 0 0 396.9 354.3;" xml:space="preserve">
+						<style type="text/css">
+							.st0{fill:#CCCCFF;}
+							.st1{font-family:sans-serif;}
+							.st2{font-size:9.9626px;}
+							.st3{fill:#CCCCCC;}
+							.st4{fill:none;stroke:#ffffff;stroke-width:2.8347;stroke-miterlimit:10;}
+							.st5{fill:none;stroke:#ffffff;stroke-width:0.7086;stroke-miterlimit:10;}
+						</style>
+								<circle class="st0" cx="14.2" cy="141.7" r="14.2"/>
+								<text transform="matrix(1 0 0 1 10.8499 145.1884)" class="st1 st2">A</text>
+								<circle class="st3" cx="70.9" cy="184.3" r="14.2"/>
+								<text transform="matrix(1 0 0 1 67.5439 187.7084)" class="st1 st2">B</text>
+								<ellipse transform="matrix(0.9871 -0.1602 0.1602 0.9871 -15.1598 10.3623)" class="st0" cx="56.7" cy="99.2" rx="14.2" ry="14.2"/>
+								<text transform="matrix(1 0 0 1 53.5099 102.6734)" class="st1 st2">C</text>
+								<ellipse transform="matrix(0.9571 -0.2898 0.2898 0.9571 -5.1728 21.7522)" class="st3" cx="70.9" cy="28.3" rx="14.2" ry="14.2"/>
+								<text transform="matrix(1 0 0 1 67.2699 31.8014)" class="st1 st2">D</text>
+								<ellipse transform="matrix(0.8507 -0.5257 0.5257 0.8507 22.1852 106.4358)" class="st3" cx="198.4" cy="14.2" rx="14.2" ry="14.2"/>
+								<text transform="matrix(1 0 0 1 195.4529 17.6134)" class="st1 st2">E</text>
+								<circle class="st0" cx="127.6" cy="99.2" r="14.2"/>
+								<text transform="matrix(1 0 0 1 124.7259 102.6534)" class="st1 st2">F</text>
+								<circle class="st3" cx="141.7" cy="184.3" r="14.2"/>
+								<text transform="matrix(1 0 0 1 138.4109 187.7134)" class="st1 st2">G</text>
+								<circle class="st3" cx="155.9" cy="240.9" r="14.2"/>
+								<text transform="matrix(1 0 0 1 152.3799 244.4024)" class="st1 st2">H</text>
+								<circle class="st3" cx="198.4" cy="297.6" r="14.2"/>
+								<text transform="matrix(1 0 0 1 197.0419 301.0964)" class="st1 st2">I</text>
+								<circle class="st3" cx="212.6" cy="184.3" r="14.2"/>
+								<text transform="matrix(1 0 0 1 210.2488 187.5994)" class="st1 st2">J</text>
+								<circle class="st0" cx="201.3" cy="113.4" r="14.2"/>
+								<text transform="matrix(1 0 0 1 197.8049 116.8414)" class="st1 st2">K</text>
+								<ellipse transform="matrix(0.9732 -0.2298 0.2298 0.9732 -9.0773 63.7668)" class="st0" cx="269.3" cy="70.9" rx="14.2" ry="14.2"/>
+								<text transform="matrix(1 0 0 1 266.5939 74.3214)" class="st1 st2">L</text>
+								<ellipse transform="matrix(0.9871 -0.1602 0.1602 0.9871 -18.8595 49.5069)" class="st3" cx="297.6" cy="141.7" rx="14.2" ry="14.2"/>
+								<text transform="matrix(1 0 0 1 293.2819 145.1884)" class="st1 st2">M</text>
+								<circle class="st3" cx="326" cy="198.4" r="14.2"/>
+								<text transform="matrix(1 0 0 1 322.4608 201.8824)" class="st1 st2">N</text>
+								<circle class="st3" cx="326" cy="340.2" r="14.2"/>
+								<text transform="matrix(1 0 0 1 322.3218 343.6164)" class="st1 st2">O</text>
+								<circle class="st3" cx="382.7" cy="198.4" r="14.2"/>
+								<text transform="matrix(1 0 0 1 379.4979 201.8824)" class="st1 st2">P</text>
+								<circle class="st0" cx="354.3" cy="56.7" r="14.2"/>
+								<text transform="matrix(1 0 0 1 350.6678 59.6354)" class="st1 st2">Q</text>
+								<line class="st4" x1="24.3" y1="131.6" x2="46.5" y2="109.4"/>
+								<line class="st4" x1="71.1" y1="99.2" x2="113.2" y2="99.2"/>
+								<line class="st4" x1="141.7" y1="101.9" x2="187.1" y2="110.7"/>
+								<line class="st4" x1="213.5" y1="105.7" x2="257.1" y2="78.5"/>
+								<line class="st4" x1="283.5" y1="68.5" x2="340.1" y2="59.1"/>
+								<line class="st5" x1="25.7" y1="150.4" x2="59.4" y2="175.6"/>
+								<line class="st5" x1="85.2" y1="184.3" x2="127.4" y2="184.3"/>
+								<line class="st5" x1="139.4" y1="170.1" x2="129.9" y2="113.4"/>
+								<line class="st5" x1="145.2" y1="198.2" x2="152.4" y2="227"/>
+								<line class="st5" x1="156.1" y1="184.3" x2="198.2" y2="184.3"/>
+								<line class="st5" x1="210.3" y1="170" x2="203.5" y2="127.6"/>
+								<line class="st5" x1="225.5" y1="177.8" x2="284.8" y2="148.2"/>
+								<line class="st5" x1="226.9" y1="186" x2="311.7" y2="196.6"/>
+								<line class="st5" x1="292.3" y1="128.3" x2="274.7" y2="84.3"/>
+								<line class="st5" x1="304.1" y1="154.6" x2="319.6" y2="185.6"/>
+								<line class="st5" x1="340.4" y1="198.4" x2="368.3" y2="198.4"/>
+								<line class="st5" x1="379.9" y1="184.3" x2="357.2" y2="70.8"/>
+								<line class="st5" x1="377.3" y1="211.8" x2="331.3" y2="326.8"/>
+								<line class="st5" x1="164.6" y1="252.5" x2="189.8" y2="286.1"/>
+								<line class="st5" x1="209.8" y1="288.8" x2="314.6" y2="207.3"/>
+								<line class="st5" x1="212.1" y1="302.2" x2="312.3" y2="335.6"/>
+								<line class="st5" x1="68" y1="42.5" x2="59.5" y2="85.1"/>
+								<line class="st5" x1="85.2" y1="26.8" x2="184.1" y2="15.8"/>
+								<line class="st5" x1="198.8" y1="28.5" x2="200.9" y2="99"/>
+								<line class="st5" x1="212.3" y1="18" x2="340.5" y2="52.9"/>
+					</svg>
+						</div>
+						<p class="fragment">It prevents theft!</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>HTLC</h3>
+						<ul>
+							<li><span style="font-weight: bold;">H</span>ashed <span style="font-weight: bold;">T</span>ime<span style="font-weight: bold;">L</span>ock <span style="font-weight: bold;">C</span>ontract</li>
+							<li class="fragment">Proposed by Poon and Dryja in the <a href="https://lightning.network/lightning-network-paper.pdf">Lightning Network paper</a></li>
+							<li class="fragment">Uses time locks</li>
+							<li class="fragment">Uses hash locks</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Time lock</h3>
+						<p>Funds can only be spent after a given time or block number</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Hash lock</h3>
+						<p>Funds can only be spent if you know the secret <span style="font-weight: bold;">s</span>, such that:</p>
+						<p><span style="font-weight: bold;">hash(s) == x</span></p>
+						<p class="fragment"><span style="font-weight: bold;">x</span> is written to the unlocking script, <span style="font-weight: bold;">s</span> needs to be provided by the spender such that <span style="font-weight: bold;">x</span> can be reproduced</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Combine restrictions</h3>
+						<p><span style="color: red;">signature</span> + <span style="color: blue;">hash lock</span> + <span style="color: green;">time lock</span></p>
+						<br />
+						<p class="fragment">Funds can be spent by <span style="color: red;">you</span>, <span style="color: blue;">at block 800,000 (or later)</span>, <span style="color: green;"> if you know a secret</span></p>
+					</section>
+					<section data-transition="convex">
+						<h3>simplified HTLC</h3>
+						<p><span style="color: red;">signature</span>, <span style="color: blue;">hash lock</span>, <span style="color: green;">time lock</span></p>
+						<br />
+						<p>Funds can be spent by <span style="color: red;">Alice</span> <span style="color: blue;">at block 800,000 (or later)</span></p>
+						<span style="font-weight: bold;">OR</span>
+						<p>by <span style="color: red;">Bob</span> <span style="color: green;"> if he knows a secret</span></p>
+					</section>
+					<section data-transition="convex">
+						<h3>Scenario</h3>
+						<img src="images/HTLCchannelSetup.png" width="40%"/>
+						<p>Alice wants to send Eric 1 BTC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="40%"/>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>1) Eric creates a secret <span style="font-weight: bold;">R</span> and communicates its hash to Alice</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>2) Alice creates a commitment TX: <em>I will pay Bob 1.003 BTC if he presents the secret (R) that leads to hash H, during the next 10 blocks</em></p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Bob now also knows H, so he can craft a similar TX</em></p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>3) Bob creates a commitment TX: <em>I will pay Carol 1.002 BTC if she presents the secret (R) that leads to hash H, during the next 9 blocks</em></p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Remember, the commitment TX spends the 2-of-2 multiSig (funding TX) and is <em>not</em> being published to the Bitcoin network!</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>4) Carol now also knows H, she crafts a similar TX for Diana</p>
+						<p>5) Same story for Diana</p>
+					</section>
+					<section data-transition="none">
+						<h3>Notice</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Diminishing BTC amount --> a routing fee being paid</p>
+					</section>
+					<section data-transition="none">
+						<h3>Notice</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Diminishing time lock --> Security measure to ensure atomicity of the transaction</p>
+					</section>
+					<section data-transition="none">
+						<h3>Notice</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Eric is the only one who actually knows R! Diana constructed an HTLC in which she promised 1 BTC to Eric if he reveals R!</p>
+					</section>
+					<section data-transition="none">
+						<h3>Notice</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Eric is happy! But what about Diana? Will she ever receive her "refund" from Carol?</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Eric publishes the HTLC on-chain (closes the channel)</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Now he has 7 blocks to spend the commitment TX, or else Diana can take the money back.</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>He spends that commitment TX and sends it to himself to ensure the money belongs to him forever. This means, he needs to reveal R on-chain!</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Bob, Carol and Diana are watching the blockchain and learn R from there! They can now also claim their funds.</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Happy end!</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Well, not really.</p>
+					</section>
+					<section data-transition="none">
+						<h3>Eric claims his funds!</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Even though the payment went through, channels have also been closed, which is unfortunate.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>So let's go back to the moment Diana sent Eric her HTLC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>As we have just witnessed, Eric <em>could</em> claim his funds now, and Diana knows that as well.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>So Eric asks Diana to move to a new channel state, where Eric owns +1 BTC, and Diana -1 BTC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Diana tells Eric that she is only willing to do that if he tells her R</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>HTLC consolidation</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLC consolidation</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>They collaboratively move to a new channel state and remove the HTLC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>Diana has given 1 BTC to Bob. She is now in the same situation as Bob before.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>The scheme repeats through 7, 8, 9 until the transaction went through.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>What if step 1 does not happen?</p>
+						<p class="fragment">Payment cannot be constructed.</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>What if step 2 does not happen?</p>
+						<p class="fragment">Alice searches for a new payment route</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>What if one of steps 2, 3, 4, 5, 6 does not happen?</p>
+						<p class="fragment">Funds are locked in HTLC until time lock runs out</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>What if one of steps 7, 8, 9 does not happen?</p>
+						<p class="fragment">Bob, Carol or Diana may lose 1 BTC</p>
+					</section>
+					<section data-transition="none">
+						<h3>HTLCs in action</h3>
+						<img src="images/HTLCsDiagram.png" width="35%"/>
+						<p>They are protected by the time-lock to have enough time to react. But if they leave the system, they can only harm themselves, not anyone else.</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Conclusion</h3>
+						<p>The transaction is atomic!</p>
+						<p class="fragment">(as long as you run your system responsibly)</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Any questions so far?</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Scripts</h3>
+						<p>For the sake of completeness</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Hash lock script</h3>
+						<p>Extract from HTLC output script in  (<a href="https://github.com/lightning/bolts/blob/master/03-transactions.md#offered-htlc-outputs">Bolt 3</a>)</p>
+						<pre data-id="code-animation"><code class="hljs zsh" data-trim data-line-numbers>
+# To remote node with preimage.
+OP_HASH160 &lt;RIPEMD160(payment_hash)&gt; OP_EQUALVERIFY
+OP_CHECKSIG
+						</code></pre>
+					</section>
+					<section data-transition="convex">
+						<h3>Time lock script</h3>
+						<p>Extract from HTLC output script in (<a href="https://github.com/lightning/bolts/blob/master/03-transactions.md#received-htlc-outputs">Bolt 3</a>)</p>
+						<pre data-id="code-animation"><code class="hljs zsh" data-trim data-line-numbers>
+# To remote node after timeout.
+OP_DROP &lt;cltv_expiry&gt; OP_CHECKLOCKTIMEVERIFY OP_DROP
+OP_CHECKSIG
+						</code></pre>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<p>Any questions regarding HTLCs?</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>PTLC Routing</h3>
+						<ul>
+							<li>Successor to HTLCs</li>
+							<li class="fragment"><span style="font-weight: bold;">P</span>oint <span style="font-weight: bold;">T</span>ime<span style="font-weight: bold;">L</span>ocked <span style="font-weight: bold;">C</span>ontract</li>
+							<li class="fragment">Uses adaptor signatures</li>
+							<li class="fragment">Based on Schnorr signatures</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>PTLC Routing</h3>
+						<ul>
+							<li>Use a point (PubKey) rather than hash lock</li>
+							<li class="fragment">Point can be aggregated with other key point</li>
+							<li class="fragment">Unilateral close path becomes smaller</li>
+							<li class="fragment">No shared secret amongst all hops</li>
+							<li class="fragment">No payment correlation between hops</li>
+							<li class="fragment">Preimage as proof of payment</li>
+							<li class="fragment"><a href="https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-June/002029.html">Stuckless payments</a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="https://medium.com/softblocks/lightning-network-in-depth-part-2-htlc-and-payment-routing-db46aea445a8">HTLCs explained</a></li>
+							<li><a href="https://ellemouton.com/">Elle Mouton blog</a></li>
+							<li><a href="https://www.lopp.net/lightning-information.html">Jason Lopp resources list</a></li>
+						</ul>
+					</section>
+				</section>
+			</div>
+		</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
