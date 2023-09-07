@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-transition="convex">
+						<h3>Lipa Brown Bag</h3>
+						<p>07.09.2023</p>
+						<p>Eltoo</p>
+						<p>Gabriel Comte</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Eltoo</h3>
+						<p>Ever heard of it?</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Naming</h3>
+						<p class="fragment">Layer 2</p>
+						<p class="fragment">L2</p>
+						<p class="fragment">eltoo</p>
+					</section>
+					<section data-transition="convex">
+						<h3>New update mechanism</h3>
+						<ul>
+							<li>Replacement for the penalty TX</li>
+							<li class="fragment">Concept phase, not implemented yet</li>
+							<li class="fragment"><a href="https://blockstream.com/eltoo.pdf">Paper</a> by Decker, Russell, Osuntokun</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>New update mechanism</h3>
+						<img src="images/UpdateMechanism.png" />
+					</section>
+					<section data-transition="none">
+						<img src="images/Lightning_Network_Protocol_Suite.png"/>
+					</section>
+					<section data-transition="none">
+						<img src="images/Lightning_Network_Protocol_Suite_highlighted.png" />
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Bitcoin Timelocks</h3>
+						<p><span style="font-weight: bold">nLockTime</span>: TX is only valid after block X</p>
+						<p class="fragment"><span style="font-weight: bold">nSequence</span>: TX is only valid X blocks after parent confirmed</p>
+						<p class="fragment"><span style="font-weight: bold">CLTV</span>: Enforces compatible nLockTime on spending TX</p>
+						<p class="fragment"><span style="font-weight: bold">CSV</span>: Enforces compatible nSequence on spending TX</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Setup</h3>
+						<img src="images/eltooSetup.png" />
+					</section>
+					<section data-transition="none">
+						<h3>Channel state 1</h3>
+						<img src="images/eltooState1.png" />
+					</section>
+					<section data-transition="none">
+						<h3>Channel state 1</h3>
+						<img src="images/eltooState1LockTime.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Channel state 2</h3>
+						<img src="images/eltooState2.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Close channel</h3>
+						<img src="images/eltooTooManyBroadcastings.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Close channel</h3>
+						<img src="images/eltooHonestCase.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Allowed ordering</h3>
+						<img src="images/eltooAllowedOrdering.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Prevented ordering</h3>
+						<img src="images/eltooPreventedOrdering.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Malicious attempt</h3>
+						<img src="images/eltooCheat.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Attack prevention</h3>
+						<img src="images/eltooCheatResolve.png" />
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Eltoo advantages</h3>
+						<ul>
+							<li>Removed security issue: Publish old state</li>
+							<li class="fragment">Symmetric channel states</li>
+							<li class="fragment">Knowing last channel state suffices</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>SIGHASH_ANYPREVOUT</h3>
+						<p>Draft: <a href="https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki">BIP 118</a></p>
+						<p>Previously <span font-weight="bold">SIGHASH_NO_INPUT</span></p>
+						<p><a href="https://anyprevout.xyz/">Info page</a></p><p class="fragment">Requires a soft fork</p>
+						<p class="fragment">... community is not in consensus about it</p>
+					</section>
+					<section data-transition="convex">
+						<h3>No penalty</h3>
+						<p>Attempting to cheat becomes essentially free</p>
+					</section>
+					<section data-transition="convex">
+						<h2>Questions?</h2>
+						<img src="images/homer_qeustions.jpeg" />
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
