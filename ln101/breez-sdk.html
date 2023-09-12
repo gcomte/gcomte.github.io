@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-transition="convex">
+						<h3>Breez SDK</h3>
+						<p>vs Lightning Dev Kit</p>
+						<p style="font-style: italic">Contains Greenlight (See <a href="https://www.youtube.com/watch?v=SEz70ClCetM" target="_blank">short explanation of Bluelight</a>)</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Responsibilities of an LN node</h3>
+						<ul>
+							<li>Sending and Receiving LN payments</li>
+							<li class="fragment">Sending and Receiving L1 payments</li>
+							<li class="fragment">Layer 1 gossip</li>
+							<li class="fragment">Layer 2 gossip</li>
+							<li class="fragment">Key management and signing</li>
+							<li class="fragment">Pathfinding</li>
+							<li class="fragment">Forward payments (not Lipa)</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Work distribution | LND</h3>
+						<table>
+							<tr>
+								<th>Local</th>
+								<th>Cloud</th>
+							</tr><tr>
+								<td>LN payments</td>
+								<td></td>
+							</tr><tr>
+								<td>L1 payments</td>
+								<td></td>
+							</tr><tr>
+								<td>L1 gossip</td>
+								<td></td>
+							</tr><tr>
+								<td>L2 gossip</td>
+							    <td></td>
+							</tr><tr>
+								<td>Key mgmt / sign</td>
+						    	<td></td>
+							</tr><tr>
+								<td>Pathfinding</td>
+							    <td></td>
+							</tr>
+						</table>
+					</section>
+					<section data-transition="convex">
+						<h3>Work distribution | WoS</h3>
+						<table>
+							<tr>
+								<th>Local</th>
+								<th>Cloud</th>
+							</tr><tr>
+								<td></td>
+								<td>LN payments</td>
+							</tr><tr>
+								<td></td>
+								<td>L1 payments</td>
+							</tr><tr>
+								<td></td>
+								<td>L1 gossip</td>
+							</tr><tr>
+								<td></td>
+								<td>L2 gossip</td>
+							</tr><tr>
+								<td></td>
+								<td>Key mgmt / sign</td>
+							</tr><tr>
+								<td></td>
+								<td>Pathfinding</td>
+							</tr>
+						</table>
+					</section>
+					<section data-transition="convex">
+						<h3>Work distribution | LDK</h3>
+						<table>
+							<tr>
+								<th>Local</th>
+								<th>Cloud</th>
+							</tr><tr>
+								<td>LN payments</td>
+								<td></td>
+							</tr><tr>
+								<td>L1 payments</td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td>Electrum</td>
+							</tr><tr>
+								<td>L2 gossip</td>
+								<td>RGS</td>
+							</tr><tr>
+								<td>Key mgmt / sign</td>
+								<td></td>
+							</tr><tr>
+								<td>Pathfinding</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section data-transition="convex">
+						<h3>Work distribution | Greenlight</h3>
+						<table>
+							<tr>
+								<th>Local</th>
+								<th>Cloud</th>
+							</tr><tr>
+								<td></td>
+								<td>LN payments</td>
+							</tr><tr>
+								<td></td>
+								<td>L1 payments</td>
+							</tr><tr>
+								<td></td>
+								<td>L1 gossip</td>
+							</tr><tr>
+								<td></td>
+								<td>L2 gossip</td>
+							</tr><tr>
+								<td>Key mgmt / sign</td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td>Pathfinding</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Blockstream Greenlight</h3>
+						<ul>
+							<li class="fragment">Hosted by Blockstream</li>
+							<li class="fragment">Core Lightning node living in the cloud</li>
+							<li class="fragment">Shared L1 and L2 gossip</li>
+							<li class="fragment">Shutdown when not needed</li>
+							<li class="fragment">Cheap to run</li>
+							<li class="fragment">Sees only signatures, never keys</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Consequences for Lipa</h3>
+						<ul>
+							<li>Almost nothing in our own cloud</li>
+							<li class="fragment">Regulatory dream</li>
+							<li class="fragment">Less complexity</li>
+							<ul>
+								<li class="fragment">Development</li>
+								<li class="fragment">Maintenance</li>
+								<li class="fragment">Operations on device</li>
+							</ul>
+							<li class="fragment">Support more difficult</li>
+							<li class="fragment">Less control over change</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Breez SDK</h3>
+						<ul>
+							<li class="fragment">Easy Rust interface for Greenlight</li>
+							<li class="fragment">Additional services</li>
+							<ul>
+								<li class="fragment">LSP</li>
+								<li class="fragment">Swaps</li>
+								<li class="fragment">Fiat Currency exchange</li>
+								<li class="fragment">Fiat Currency conversions</li>
+								<li class="fragment">LNURL</li>
+							</ul>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Breez | Business</h3>
+						<ul>
+							<li class="fragment">Breez is free (and open source)</li>
+							<li class="fragment">Breez pays for Greenlight ops</li>
+							<li class="fragment">Breez monetizes their LSP</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Breez SDK</h3>
+						<img src="images/BreezSDK.jpg"/>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Migration</h3>
+						<ul>
+							<li>Move funds from LDK node to Greenlight node</li>
+							<li class="fragment">Only for existing users</li>
+							<li class="fragment">Fake migration</li>
+							<li class="fragment">Don't onboard new users</li>
+							<li class="fragment">LDK-based Lipa and Breez-based Lipa in parallel</li>
+							<li class="fragment">Move to Breez SDK quickly</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Questions</h3>
+						<img src="images/questions_owl.jpg"/>
+					</section>
+				</section>
+			</div>
+		</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
