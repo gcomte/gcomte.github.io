@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-transition="convex">
+						<h3>Lightning Development Tools</h3>
+						<p>Gabriel Comte</p>
+						<p>Slides: gcomte.github.io/classes/ln-dev-tools.html</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Bitcoin Networks</h3>
+						<ul>
+							<li>Mainnet</li>
+							<li class="fragment">Testnet</li>
+							<li class="fragment">Signet</li>
+							<li class="fragment">Regtest</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Testnet</h3>
+						<ul>
+							<li><i>testnet3</i></li>
+							<li class="fragment">introduced with Bitcoin Core version 0.7</li>
+							<li class="fragment">First block mined February 2011</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Testnet details</h3>
+						<ul>
+							<li>Almost identical to Mainnet</li>
+							<li class="fragment">Different ports, address types, genesis block</li>
+							<li class="fragment">Difficulty resets if no block found for 20 minutes</li>
+							<li class="fragment">No value <i>by definition</i></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Testnet tools</h3>
+						<ul>
+							<li>Bitcoin Core in Testnet mode</li>
+							<li class="fragment">Faucets</li>
+							<li class="fragment">https://mempool.space/testnet</li>
+							<li class="fragment">blockstream.info/testnet/</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Testnet challenges</h3>
+						<ul>
+							<li>Same PoW hashing algo as Mainnet</li>
+							<li class="fragment">Unreliable block production</li>
+							<li class="fragment">Current block > 2,534,810</li>
+							<li class="fragment">2,534,810 / 210,000 = 12 (halvings)</li>
+							<li class="fragment">50 / 2¹²</li>
+							<li class="fragment">Block subsidy = 0.014 BTC</li>
+							<li class="fragment">Testnet coins are scarce!!</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Reality check</h3>
+						<img src="images/emptyfaucets.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Testnet value</h3>
+						<img src="images/sell_testnet_coins.png" />
+					</section>
+					<section data-transition="convex">
+						<h3>Initiate a new testnet</h3>
+						<p class="fragment">Update entire network (including services, LN channels, ...)</p>
+					</section>
+					<section data-transition="convex">
+						<h3>Signet</h3>
+						<ul>
+							<li>Idea: Centralize block production</li>
+							<li class="fragment">Almost the same as Testnet</li>
+							<li class="fragment">Blocks require PoW <span style="font-weight: bold">+ signature</span></li>
+							<li class="fragment">Reliable block production</span></li>
+							<li class="fragment">... or even reliably unreliable block production</span></li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Signet services</h3>
+						<ul>
+							<li>mempool.space/signet</li>
+							<li class="fragment">Faucets</li>
+							<ul class="fragment">
+								<li>https://signetfaucet.com/</li>
+								<li>https://signet.bc-2.jp/</li>
+							</ul>
+							<li class="fragment">Web wallet: https://sw.bublina.eu.org</li>
+							<li class="fragment">Mobile wallet: <a href="https://github.com/nbd-wtf/obw" target="_blank">https://github.com/nbd-wtf/obw</a></li>
+							<li class="fragment">Explorer: https://explorer.bc-2.jp/</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Practical challenges</h3>
+						<ul>
+							<li>LN on Testnet is unreliable</li>
+							<li class="fragment">LN on Signet is small (but growing)</li>
+							<li class="fragment">Some services/solutions do not support Testnet/Signet</li>
+							<li class="fragment">Some companies test on Mainnet!</li>
+							<li class="fragment">Hard to find a Testnet wallet</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Practical challenges</h3>
+						<ul>
+							<li>LN on Testnet is unreliable</li>
+							<li class="fragment">LN on Signet is small (but growing)</li>
+							<li class="fragment">Some services/solutions do not support Testnet/Signet</li>
+							<li class="fragment">Some companies test on Mainnet!</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Regtest</h3>
+						<ul>
+							<li><i>Regression Test Network</i></li>
+							<li class="fragment">Local development</li>
+							<ul>
+								<li class="fragment">External connections disabled</li>
+								<li class="fragment">Difficulty = 0</li>
+							</ul>
+							<li class="fragment">Usually short lived</li>
+							<li class="fragment">You are at the wheel</li>
+							<li class="fragment">Perfect playground</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Polar</h3>
+						<ul>
+							<li>Regtest playground with GUI</li>
+							<li class="fragment">Beautiful graphical feedback</li>
+							<li class="fragment">Docker-based</li>
+							<li class="fragment">Website: https://lightningpolar.com/</li>
+							<li class="fragment">GitHub: https://github.com/jamaljsr/polar</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Demo</h3>
+					</section>
+					<section data-transition="convex">
+						<h3>Hands on!</h3>
+						<ul>
+							<li>Download Polar and initiate your own network</li>
+							<li>https://lightningpolar.com/</li>
+							<li>Create your own network</li>
+							<li>Open channels</li>
+							<li>Send sats back and forth</li>
+							<li>Try multiple channels for same node</li>
+							<li>Send a Multipath payment</li>
+							<li>What error do you get if payment is bigger than channel capacity?</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Nigiri</h3>
+						<ul>
+							<li>Regtest playground with GUI</li>
+							<li class="fragment">Headless</li>
+							<li class="fragment">Docker-based</li>
+							<li class="fragment">Programmable (int tests)</li>
+							<li class="fragment">Website: https://nigiri.vulpem.com/</li>
+							<li class="fragment">GitHub: https://github.com/vulpemventures/nigiri</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Demo</h3>
+					</section>
+					<section data-transition="convex">
+						<h3>Hands on!</h3>
+						<ul>
+							<li>Download Nigiri and spin up your own network</li>
+							<li>https://nigiri.vulpem.com/</li>
+							<li>Open channels</li>
+							<li>Send sats back and forth</li>
+							<li>Close channels</li>
+						</ul>
+					</section>
+					<section data-transition="convex">
+						<h3>Helpful commands</h3>
+						<ul>
+							<li>nigiri start --ln</li>
+							<li>nigiri stop</li>
+							<li>nigiri rpc -generate 10</li>
+							<li>nigiri faucet lnd</li>
+							<li>nigiri lnd getinfo</li>
+							<li>nigiri cln getinfo</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Scaling lightning</h3>
+						<ul>
+							<li>Testing toolkit</li>
+							<li class="fragment">Headless</li>
+							<li class="fragment">Kubernetes-based</li>
+							<li class="fragment">GitHub: https://github.com/scaling-lightning/scaling-lightning</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Some other tools ...</h3>
+						<ul>
+							<li class="fragment">Invoice decoder</li>
+							<ul class="fragment">
+								<li class="fragment">https://lightningdecoder.com/</li>
+								<li class="fragment">https://lndecode.com/</li>
+								<li class="fragment">https://www.bolt11.org/</li>
+							</ul>
+							<li class="fragment">Lightning Explorers</li>
+							<ul class="fragment">
+								<li class="fragment">1ml.com | 1ml.com/testnet</li>
+								<li class="fragment">https://mempool.space/lightning</li>
+								<li class="fragment">amboss.space</li>
+							</ul>
+							<li class="fragment">LNURL playground: https://lnurl.fiatjaf.com/</li>
+							<li class="fragment">Check out <a href="https://www.lopp.net/lightning-information.html#dev_tools">Jameson Lopp's list</a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex">
+						<h3>Thanks for listening</h3>
+						<p>Questions?</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
