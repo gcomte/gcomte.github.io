@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<section>
+					<h2>Onion Routing</h2>
+					<img src="images/LN_overview_sphinx.png" />
+				</section>
+				<section>
+					<h2>Remember</h2>
+					<ul>
+						<li class="fragment">
+							<a href="privacy.html" target="_blank">Privacy</a>
+						</li>
+						<li class="fragment">
+							<a href="routing.html" target="_blank">Routing</a>
+						</li>
+						<li class="fragment">
+							<a href="atomic-routing.html" target="_blank">Atomic Routing</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Objective</h2>
+					<ul>
+						<li>Blind the payment path for forwarding nodes</li>
+						<ul>
+							<li class="fragment">The sender knows where he sends X sats to</li>
+							<li class="fragment">The receiver knows he received X sats, but from whom?</li>
+							<li class="fragment">Forwarding nodes don't know who sends to whom. (But Potentially roughly the amount.)</li>
+						</ul>
+					</ul>
+					<p class="fragment">Onion Routing existed before Lightning and is also used in other Protocols!</p>
+				</section>
+			</section>
+				<section>
+				<section>
+					<h2>Let's play a game</h2>
+					<p class="fragment">... Once upon a time, there was a very shy AI, that found Marco's beautiful code on GitLab and fell in love with him ...</p>
+				</section>
+				<section>
+					<h2>The Game</h2>
+					<img src="images/onionMessagesGame.png" />
+				</section>
+				<section>
+					<h2>The Game</h2>
+					<p>Hey Adrian, decode the following base64 String:</p>
+					<p>U2NoaWNrIGRpZSBmb3VnZW5kaSBNZXNzYWdlIGFtIFJhbGYuCgotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKSGFsbG8gUmFsZiEKCkxhc3MgdW5zIGVpbiBTcGllbCBzcGllbGVuIEItKSBHZWhlIGF1ZiBodHRwczovL3d3dy5iYXNlNjRkZWNvZGUub3JnLyB1bmQgZGVjb2RpZXJlIGRlbiB1bnRlbiBhbmdlZ2ViZW5lbiBTdHJpbmchCgpVMk5vYVdOclpTQmthV1VnZFc1MFpXNXpkR1ZvWlc1a1pTQk9ZV05vY21samFIUWdZVzRnVFdGeVkyOHVJRVJsWTI5a2FXVnlaU0J6YVdVZ2MyVnNZbVZ5SUc1cFkyaDBMQ0JrYVdVZ1FYVm1iTU8yYzNWdVp5QmtaWE1nVTNCcFpXeHpJR1p2YkdkMElHSmhiR1FnT3kwcElFNXBZMmgwSUcxdloyVnNiaUE2TFNvS0NpMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdENncElZV3hzYnlCTllYSmpieUVLQ2t4aGMzTWdkVzV6SUdWcGJpQlRjR2xsYkNCemNHbGxiR1Z1SUVJdEtTQkhaV2hsSUdGMVppQm9kSFJ3Y3pvdkwzZDNkeTVpWVhObE5qUmtaV052WkdVdWIzSm5MeUIxYm1RZ1pHVmpiMlJwWlhKbElHUmxiaUIxYm5SbGJpQmhibWRsWjJWaVpXNWxiaUJUZEhKcGJtY2hDZ3BUUjBaellrYzRaMVJYUm5sWk1qaG9RMmR3UW1SWFdXZGFWMngxV2xoSloxVXlkR2hpUjBWblpHMDVkVWxFUldkWmJXeDZTVVZLY0dSSFRuWmhWelJuWVVkR2VtUkRRa1ZrVTBKcldsZGFjR0p0YkRCaFdGbG5Va2RzYUdKWE9YVmFRMEpKV1ZjMWEyTjVSV2RTUjFad1ltbENSR0l5VW14SlIyeDZaRU5DZW1KNVFteGlSMVp1V1ZjMU1FeERRbXRaV0U1NlNVaE9iR0pIU25wa1EwSnJXbGhKWjFFeU9YUmpSMnh6V2xoSloxbFlRbmRpUjBZeFdrZHNiR051VVhWSlJYaHdZMGRGWjFwdFZuQmFXRW93U1VWU2NGa3laMmhKUlRGb1dUSm5aMlF5Vm5Ca1IxWjVTVWhPZGtsRWQzcERaMjkwU1VWR2RXVlhPWFZsVnpGc1NVVkdTa3hWYUhaYVIzaHNZMjFzZFE9PQ==</p>
+				</section>
+				<section>
+					<h2>Conclusion</h2>
+					<ul>
+						<li class="fragment">AIsha knows sender, receiver and message</li>
+						<li class="fragment">Adrian just knows he forwards a message from AIsha to Ralf.</li>
+						<li class="fragment">Ralf just knows he forwards a message from Adrian to Marco.</li>
+						<li class="fragment">Marco knows the receiver and the message.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Lightning Network</h2>
+					<p class="fragment">"Source-based Onion Routing"</p>
+					<p class="fragment">Based on <a href="http://www.cypherpunks.ca/~iang/pubs/Sphinx_Oakland09.pdf">SPHINX</a> schema</p>
+				</section>
+				<section>
+					<img src="images/LayersOfTheOnion.png" />
+				</section>
+			</section>
+		</div>
+	</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
