@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<section>
+					<h2>Blinded paths</h2>
+					<p>How to achieve recipient privacy</p>
+				</section>
+				<section>
+					<h2>Remember Routing in LN</h2>
+					<ul>
+						<li class="fragment">
+							It's source-based
+						</li>
+						<li class="fragment">
+							Sender constructs entire payment path
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Remember Onion Routing</h2>
+					<ul>
+						<li class="fragment">
+							Sender knows receiver
+						</li>
+						<li class="fragment">
+							Sender constructs onion
+						</li>
+						<li class="fragment">
+							Each hop peels a layer of encryption and learns the next hop
+						</li>
+					</ul>
+				</section>
+				<section>
+					<img src="images/LayersOfTheOnion.png" />
+				</section>
+				<section>
+					<h2>Sender needs to know everything</h2>
+					<p class="fragment">If the recipient is obfuscated, how can the sender even construct the (onion) path?</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Rendez-vous routing (simplified)</h2>
+					<ul>
+						<li class="fragment">
+							Sender: Alice
+						</li>
+						<li class="fragment">
+							Receiver: Frank
+						</li>
+						<li class="fragment">
+							Frank tells Erin to himself (Frank)
+						</li>
+						<li class="fragment">
+							Frank tells Dave to forward to Erin
+						</li>
+						<li class="fragment">
+							Frank tells Charlie to forward to Dave
+						</li>
+						<li class="fragment">
+							Frank puts Charlie as receiver in the invoice
+						</li>
+						<li class="fragment">
+							Alice creates route: Alice -> Bob -> Charlie
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Result</h2>
+					<img src="images/BlindedPaths.png" />
+				</section>
+				<section>
+					<h2>It works!</h2>
+					<p class="fragment">Yes, except this is not what's being implemented</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Blinded paths</h2>
+					<ul>
+						<li class="fragment">
+							Sender still constructs entire path
+						</li>
+						<li class="fragment">
+							Receiver provides sender with a blinded path and introduction point
+						</li>
+						<li class="fragment">
+							Blinded path: Node id and address are encrypted
+						</li>
+						<li class="fragment">
+							Each node can decrypt the next hops id and address
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Unveil next hop</h2>
+					<img src="images/UnveilNextHop.gif" />
+				</section>
+				<section>
+					<h2>Result</h2>
+					<img src="images/BlindedPaths_BlindedNames.png" />
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Blinded Path vs Rendez-vous routing</h2>
+					<p class="fragment">Benefits of Blinded Paths</p>
+					<ul>
+						<li class="fragment">
+							Implementation similar to vanilla payment routing (sender constructed)
+						</li>
+						<li class="fragment">
+							Reuse onions across multiple invoices
+						</li>
+					</ul>
+
+					<p class="fragment">Disadvantages</p>
+					<ul>
+						<li class="fragment">
+							Weaker privacy guarantees
+						</li>
+						<li class="fragment">
+							Bigger invoices
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Consequences</h2>
+					<ul>
+						<li class="fragment">
+							Unknown receiver
+						</li>
+						<li class="fragment">
+							More hops
+							<ul>
+								<li class="fragment">
+									Higher fees
+								</li>
+								<li class="fragment">
+									More time consuming
+								</li>
+								<li class="fragment">
+									Less reliability
+								</li>
+							</ul>
+						</li>
+						<li class="fragment">
+							Bigger invoices
+						</li>
+						<li class="fragment">
+							More complex on payment failures
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Adoption</h2>
+					<ul>
+						<li class="fragment">
+							Under development?
+						</li>
+						<li class="fragment">
+							Experimental feature in Core-Lightning
+						</li>
+						<li class="fragment">
+							Both sender and receiver need to support protocol
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Sources</h2>
+					<ul>
+						<li class="fragment">
+							<a href="https://github.com/lightning/bolts/blob/master/proposals/route-blinding.md" target="_blank">Bolt Proposal</a>
+						</li>
+						<li class="fragment">
+							<a href="https://voltage.cloud/blog/lightning-network-faq/what-are-blinded-paths-and-how-do-they-work/" target="_blank">Voltage Blog</a>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+	</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
