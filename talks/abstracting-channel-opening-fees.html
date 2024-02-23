@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<section>
+				<h2>Abstracting Channel Opening Fees</h2>
+				<p>Lipa brown bag session February 23, 2024</p>
+				<p><em>Gabriel Comte</em></p>
+			</section>
+			<section>
+				<h2>Goals</h2>
+				<ul>
+					<li class="fragment">
+						More discussion about 'liquidity contracts'
+					</li>
+					<li class="fragment">
+						Started at on-site
+					</li>
+					<li class="fragment">
+						Lipals in favour of not charging channel opening fee
+					</li>
+					<li class="fragment">
+						Share my thoughts on the topic
+					</li>
+					<li class="fragment">
+						Time for civilized and respectful discussion
+					</li>
+					<li class="fragment">
+						Following methodology: Acknowledge, Listen, Propose, Engage, Resolve
+					</li>
+				</ul>
+			</section>
+			<section>
+				<img src="abstracting-channel-opening-fees_images/a.l.p.e.r.jpg" />
+			</section>
+			<section>
+				<h2>Goals</h2>
+				<ul>
+					<li>
+						More discussion about 'liquidity contracts'
+					</li>
+					<li>
+						Started at on-site
+					</li>
+					<li>
+						Lipals in favour of not charging fees for channel opening
+					</li>
+					<li>
+						Share my thoughts on the topic
+					</li>
+					<li>
+						Time for civilized and respectful discussion
+					</li>
+					<li>
+						Methodology: Acknowledge, Listen, Propose, Engage, Resolve
+					</li>
+					<li class="fragment">
+						Establish a shared and solid understanding to make an informed decision
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>Abstracting channel opening fees</h2>
+				<ul>
+					<li class="fragment">
+						Not charging the user channel opening fees
+					</li>
+					<li class="fragment">
+						Instead Lipa (or the LSP?) pays
+					</li>
+					<li class="fragment">
+						User reimburses through alternative means
+						<ul>
+							<li class="fragment">Routing fees</li>
+							<li class="fragment">Subscription</li>
+							<li class="fragment">Ads</li>
+							<li class="fragment">Miner within Lipa Wallet</li>
+							<li class="fragment">...</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>Who's responsiblity is this?</h2>
+				<ul>
+					<li class="fragment">Lipa - being an attractive wallet</li>
+					<li class="fragment">LSP - being an attractive LSP</li>
+				</ul>
+			</section>
+			<section>
+				<h2>If it's the LSP's business</h2>
+				<p>What do we do?</p>
+				<ul>
+					<li class="fragment">Do we communicate our need?</li>
+					<li class="fragment">Do we push through our need?</li>
+					<li class="fragment">Will the free LSP market come up with the best solutions?</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>Pros</h2>
+				<p>Better UX</p>
+				<ul>
+					<li class="fragment">Lower barrier of entry</li>
+					<li class="fragment">Better first impression</li>
+					<li class="fragment">Fees suck -> user is annoyed</li>
+					<li class="fragment">Technology/complexity hidden</li>
+					<li class="fragment">Fiat-like experience</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>Cons</h2>
+				<p>Why should we continue to charge the channel opening fee?</p>
+			</section>
+			<section>
+				<h2>Increased risk of non-using users</h2>
+				<ul>
+					<li class="fragment">Use app only once</li>
+					<li class="fragment">Upfront cost is only protection</li>
+					<li class="fragment">How many LN wallets do you have on your phone?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Lipa pays - economic attack</h2>
+				<ul>
+					<li class="fragment">Malicious players can attack by spawning non-using users</li>
+					<li class="fragment">How can we differentiate?</li>
+					<li class="fragment">
+						Similar attack possible now
+						<ul>
+							<li class="fragment">Never release preimage</li>
+							<li class="fragment">LSPs responsibility</li>
+							<li class="fragment">Easier to detect in hindsight</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Incentives</h2>
+				<p>Unlucky incentive structure</p>
+				<ul>
+					<li class="fragment">When do Bitcoiners want to switch to Lightning the most?</li>
+					<li class="fragment">-> when on-chain fees are high</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Incentives</h2>
+				<p>How can we incentivize users to open channels when fees are low?</p>
+				<ul>
+					<li class="fragment">Remember fixed 2.5k sat cost</li>
+					<li class="fragment">Fewer incentives = more cost</li>
+					<li class="fragment">Gamification?</li>
+					<li class="fragment">Timely advertisement?</li>
+					<li class="fragment">Playing with fee structure?</li>
+					<li class="fragment">Limit registrations? Waitlist?</li>
+					<li class="fragment">On-chain fees themselves are most direct incentive</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Incentives</h2>
+				<ul>
+					<li class="fragment">Without proper incentives, the cost becomes higher, not lower!</li>
+					<li class="fragment">User needs to pay cost</li>
+					<li class="fragment">More expensive = worse UX?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Lipa Budgeting</h2>
+				<ul>
+					<li class="fragment">How many users are we going to get?</li>
+					<li class="fragment">Budgeting becomes more complex</li>
+					<li class="fragment">We will never be accurate</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Rant against subsidizing</h2>
+				<p>What if Lipa just subsidizes users until we have a big user base and then ... *magic*</p>
+				<ul>
+					<li class="fragment">Never subsidize in a startup *</li>
+					<li class="fragment">Product/Service must forward cost to consumer</li>
+					<li class="fragment">Cost is not about income</li>
+					<li class="fragment">Cost assesses customer value and determines its scalability</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>Alternative measures</h2>
+				<ul>
+					<li class="fragment">Smarter channel sizes</li>
+					<li class="fragment">Additional incentives</li>
+					<li class="fragment">Communicate value proposition</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>Smarter channel sizes</h2>
+				<ul>
+					<li class="fragment">Actually minimize channel opening cost</li>
+					<li class="fragment">Find out best fitting channel size per user</li>
+					<li class="fragment">E.g. stacker vs tech enthusiast</li>
+					<li class="fragment">Complex endeavour</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Additional incentives</h2>
+				<ul>
+					<li class="fragment">Inform people when inbound capacity is low</li>
+					<li class="fragment">Animate them to create inbound capacity</li>
+					<li class="fragment">Inform people about on-chain fee market</li>
+					<li class="fragment">Animate them to open channels when fees are low</li>
+					<li class="fragment">When exactly are fees low?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Communicate value prop</h2>
+				<p>People need to understand that more value has a higher price</p>
+			</section>
+			<section>
+				<h2>Bad news</h2>
+				<ul>
+					<li class="fragment">Non-custodialness has its price</li>
+					<li class="fragment">We cannot compete with fiat pricing</li>
+					<li class="fragment">Custodial BTC is essentially fiat</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Communicate value prop</h2>
+				<p>We <em>really</em> need to convey the additional value!</p>
+			</section>
+			<section>
+				<h2>Good news</h2>
+				<ul>
+					<li class="fragment">There <em>are</em> non-custodial users!</li>
+					<li class="fragment">There <em>is</em> a market!</li>
+					<li class="fragment">Non-custodial users = extremist tip of the ice berg ?</li>
+					<li class="fragment">Non-custodial users = just better informed ?</li>
+					<li class="fragment">Think of DCA apps</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Which shoe do you buy?</h2>
+				<img src="abstracting-channel-opening-fees_images/NikeFake.jpg" />
+			</section>
+			<section>
+				<h2>Which shoe do you buy?</h2>
+				<ul>
+					<li class="fragment">They look (almost) the same</li>
+					<li class="fragment">One is a lot cheaper</li>
+					<li class="fragment">Both produced in Bangladesh</li>
+					<li class="fragment">Looks like it's the same material ...</li>
+					<li class="fragment">The majority buys the more expensive one.</li>
+					<li class="fragment"><em>We</em> know - With BTC it's the same</li>
+				</ul>
+			</section>
+			<section>
+				<h2>What is custodial BTC?</h2>
+				<ul>
+					<li class="fragment">A number in a database</li>
+					<li class="fragment">Redemption not guaranteed</li>
+					<li class="fragment">Fractional reserve banking</li>
+					<li class="fragment">No censor-ship resistance</li>
+					<li class="fragment">No privacy</li>
+					<li class="fragment">Confiscation imminent</li>
+					<li class="fragment">Hack imminent</li>
+					<li class="fragment">21M not guaranteed</li>
+					<li class="fragment">...</li>
+				</ul>
+			</section>
+			<section>
+				<h2>If it's not Bitcoin, it's not Bitcoin</h2>
+			</section>
+			<section>
+				<h2>Not your keys, not your coins</h2>
+			</section>
+			<section>
+				<h2>Not your node not your rules</h2>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>Thought exercise</h2>
+				<ul>
+					<li class="fragment">Think of a world where Bitcoin does not exist</li>
+					<li class="fragment">Compare it with the reality and the future</li>
+					<li class="fragment">How much is Bitcoin's existence worth to you?</li>
+					<li class="fragment">Assign it an amount in €uro</li>
+					<li class="fragment">How many hours would you work to recreate it?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Results</h2>
+				<ul>
+					<li class="fragment">Is it more than €100 in channel opening cost?</li>
+					<li class="fragment">Is it more energy than what it takes to understand a non-custodial wallet?</li>
+				</ul>
+			</section>
+		</section>
+	</div>
+</div>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+	// More info about initialization & config:
+	// - https://revealjs.com/initialization/
+	// - https://revealjs.com/config/
+	Reveal.initialize({
+		hash: true,
+
+		// Learn about plugins: https://revealjs.com/plugins/
+		plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+	});
+</script>
+</body>
+</html>
