@@ -143,6 +143,21 @@
     },
     {
       "media": {
+        "url": "https://www.youtube.com/watch?v=BjFZuF_ZPMg",
+        "caption": "LNPBP Standards Association"
+      },
+      "start_date": {
+        "day": "7",
+        "month": "12",
+        "year": "2016"
+      },
+      "text": {
+        "headline": "The RGB protocol was proposed",
+        "text": "The RGB protocol was proposed by Peter Todd and Giacomo Zucco in 2016. The goal of RGB is to serve as a second, or even third, layer protocol that is based either directly on Bitcoin or on the Lightning Network. It enables the creation of smart contracts without the limitations inherent in any blockchain structure."
+      } 
+    },
+    {
+      "media": {
         "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/SegWitLogo.png",
         "caption": "SegWit logo",
         "credit": "Albert Dros"
@@ -325,6 +340,81 @@
       "text": {
         "headline": "The Lightning Torch",
         "text": "<p>Twitter user <a href='https://twitter.com/hodlonaut' target='_blank'>@hodlonaut</a> started a chain, by offering someone trustworthy 100,000 Satoshis, if this person would then forward this payment plus 10,000 more Satoshis to a trustworthy person of his own choosing. The next user should then also play along, passing the Satoshis from user to user as is if it was a torch. The experiment quickly became a phenomenon in the Bitcoin community with many people participating in it, like for example the Twitter CEO <a href='https://twitter.com/jack/status/1092892320842706944' target='_blank'>Jack Dorsey himself</a>.</p><p>Many people saw the Lightning Torch as an effective showcase for how seamlessly Lightning payments could be sent around the world, in a time when the Lightning Network was still in it's infancy and seldomly used.</p><p>The #LNTrustChain ended 291 handovers later, when Twitter user <a href='https://twitter.com/btcven' target='_blank'>@btcven</a> proclaimed he would <a href='https://twitter.com/btcven/status/1117082867446816768' target='_blank'>use the resulting 4,29 million Satoshis</a> as humanitarian aid for Venezuelans.</p><p>Find more details on <a href='https://takethetorch.online' target='_blank'>this website</a>.</p>"
+      }
+    },
+    {
+      "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/02-The-LNP-BP-Standards-Association-was-officially-founded.png",
+        "caption": "RGB Layers"
+      },
+      "start_date": {
+        "day": "25",
+        "month": "9",
+        "year": "2019"
+      },
+      "text": {
+        "headline": "The LNP/BP Standards Association was officially founded",
+        "text": "In 2019, the <a href='https://www.lnp-bp.org/' target='_blank'>LNP/BP Standards Association</a> was officially founded by Maxim Orlovsky and Giacomo Zucco. The primary goal of the association is to establish open standards and best practices for the second and third layer protocols for Bitcoin and the Lightning Network, introducing smart contracts to the Lightning Network and BTC. Subsequently, the association proposed the BP Node."
+      }
+    },
+    {
+      "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/03-LNP-Node-was-officially-released.png",
+        "caption": "The LNP Node was officially released"
+      },
+      "start_date": {
+        "day": "23",
+        "month": "1",
+        "year": "2021"
+      },
+      "text": {
+        "headline": "The LNP Node was officially released",
+        "text": "<p>In 2021, the <a href='https://github.com/LNP-WG/lnp-node' target='_blank'>LNP Node</a> was officially released by the LNP/BP Standards Association, aimed at achieving the \"Generalized Lightning Network.\" Its main uses include the modular design of payment channels, developer tools, and DEX.</p>"
+      }
+    },
+    {
+      "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/04-Storm-Core-was-officially-released.png",
+        "caption": "Storm Core was officially released"
+      },
+      "start_date": {
+        "day": "14",
+        "month": "1",
+        "year": "2022"
+      },
+      "text": {
+        "headline": "Storm Core was officially released",
+        "text": "In 2022, the <a href='https://github.com/Storm-WG/storm-core' target='_blank'>Storm Core</a> was officially released by the LNP/BP Standards Association. Storm is a storage and messaging layer 3 on top of the Bitcoin and Lightning Network. This library provides core components for building Storm LNP channels and applications."
+      }
+    },
+    {
+      "media": {
+        "url": "https://www.youtube.com/watch?v=VmB5SaaaABI",
+        "caption": "RGB v0.10 release"
+      },
+      "start_date": {
+        "day": "10",
+        "month": "3",
+        "year": "2023"
+      },
+      "text": {
+        "headline": "RGB v0.10 alpha1 was released",
+        "text": "In Mar 2023, version 0.10 of <a href='https://github.com/RGB-WG/rgb' target='_blank'>RGB</a> was officially released, marking the advent of the smart contract era on the Lightning Network."
+      }
+    },
+    {
+      "media": {
+        "url": "https://raw.githubusercontent.com/gcomte/gcomte.github.io/master/LightningTimeline/assets/img/06-bitlight-wallet.jpg",
+        "caption": "Bitlght wallet"
+      },
+      "start_date": {
+        "day": "25",
+        "month": "4",
+        "year": "2024"
+      },
+      "text": {
+        "headline": "Bitlght wallet was released",
+        "text": "In April 2024, the first user-oriented wallet supporting Lightning Network and RGB smart contracts, <a href='https://bitlightlabs.com/' target='_blank'>Bitlight Wallet</a>, was released by Bitlight Labs. Bitlight Labs is committed to accelerating the evolution of the Lightning Network and Bitcoin ecosystem."
       }
     }
   ]
